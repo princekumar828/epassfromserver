@@ -10,9 +10,10 @@ for dataset in datasets:
     try:
         with open(f"candidates/{dataset}.json", 'r+') as f:
             candidates = json.load(f)
-        llm = create_open_llm("")
+        llm = create_open_llm("http://localhost:11434/v1")
         logparser = parser(output_dir=f"result", dataset=dataset, dataset_scale='full',
                            llm=llm, candidates=candidates, k=3, pst=0.5)
         logparser.parse()
-    except:
-        print(dataset)
+    except Exception as e:
+        print(e)
+       

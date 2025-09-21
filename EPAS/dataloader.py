@@ -71,10 +71,42 @@ benchmark_settings = {
         'log_file': 'OpenSSH/OpenSSH_full.log',
         'log_format': '<Date> <Day> <Time> <Component> sshd\[<Pid>\]: <Content>',
     },
+
+   'hbase': {
+        'log_file': 'data/hbase/hbase.log',
+        'log_format': '<Content>',
+    },
+
+    'hive': {
+        'log_file': 'data/hive/hive.log',
+        'log_format': '<Content>',
+    },
+
+    'OpenSearch': {
+        'log_file': 'data/OpenSearch/OpenSearch_full.log',
+        'log_format': '<Content>',
+    },
+
+    'camel': {
+        'log_file': 'data/camel/camel.log',
+        'log_format': '<Content>',
+    },
+
+    'activemq': {
+        'log_file': 'data/activemq/activemq.log',
+        'log_format': '<Content>',
+    },
+
+    'CoreNLP': {
+        'log_file': 'data/CoreNLP/CoreNLP.log',
+        'log_format': '<Content>',
+    },
 }
 
-datasets = ['Apache', 'BGL', 'HDFS', 'HPC', 'Hadoop', 'HealthApp', 'Linux', 'Mac', 'OpenSSH', 'OpenStack', 'Proxifier',
-            'Spark', 'Thunderbird', 'Zookeeper']
+# datasets = ['Apache', 'BGL', 'HDFS', 'HPC', 'Hadoop', 'HealthApp', 'Linux', 'Mac', 'OpenSSH', 'OpenStack', 'Proxifier',
+#             'Spark', 'Thunderbird', 'Zookeeper', 'hbase', 'hive', 'OpenSearch', 'camel', 'activemq', 'CoreNLP']
+
+datasets = [ 'hbase', 'hive', 'OpenSearch', 'camel', 'activemq', 'CoreNLP']
 
 
 def generate_logformat_regex(logformat):
@@ -117,13 +149,15 @@ def load_data_full(dataset, data_path=""):
         print("Error: dataset not in datasets")
         return None
     log_path = os.path.join(data_path, benchmark_settings[dataset]['log_file'])
+     
     headers, regex = generate_logformat_regex(benchmark_settings[dataset]['log_format'])
     df_log = log_to_dataframe(log_path, regex, headers)
     print(f"============= Loading dataset {dataset} done =============")
     return df_log
 
 def load_groundtruth_full(dataset, data_path=""):
-    ground_truth_path = f"{data_path}/{dataset}/{dataset}_full.log_structured.csv"
+    # ground_truth_path = f"{data_path}/{dataset}/{dataset}_full.log_structured.csv"
+    ground_truth_path = f"{data_path}/{dataset}/{dataset}.GeneralAnnotation.csv"
     ground_truth = pd.read_csv(ground_truth_path)
     return ground_truth
 
@@ -207,6 +241,31 @@ benchmark_settings_2k = {
         'log_file': 'OpenSSH/OpenSSH_2k.log',
         'log_format': '<Date> <Day> <Time> <Component> sshd\[<Pid>\]: <Content>',
     },
+    'hbase': {
+          'log_file': 'hbase/hbase_2k.log',
+          'log_format': '<Content>',
+     },
+    'hive': {
+          'log_file': 'hive/hive_2k.log',
+          'log_format': '<Content>',
+     },
+    'OpenSearch': {
+          'log_file': 'OpenSearch/OpenSearch_2k.log',
+          'log_format': '<Content>',
+     },
+    'camel': {
+          'log_file': 'camel/camel_2k.log',
+          'log_format': '<Content>',
+     },
+    'activemq': {
+          'log_file': 'activemq/activemq_2k.log',
+          'log_format': '<Content>',
+     },
+    'CoreNLP': {
+          'log_file': 'CoreNLP/CoreNLP_2k.log',
+          'log_format': '<Content>',
+     },
+    
 }
 
 

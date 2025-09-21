@@ -5,7 +5,7 @@ import os
 from dataloader import load_data_full, load_data_2k
 from prefix_tree import index_tree
 from prompt import EXTRACT_TEMPLATE, MERGE_TEMPLATES
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 import pandas as pd
 from extract_wild import match_wildcard_with_content, template_invert_index, Jccard_similarity, merge_two_template, \
     cover, merge_wilds, lcs_similarity
@@ -92,7 +92,7 @@ class parser:
                                                                                            example['template'])
         query = self.prompt_extract.format(log=log, examples=example_prompt)
         try:
-            response = self.llm.predict(query)
+            response = self.llm.invoke(query)
             if(response is None):
                 response = re.sub("\d+", "<*>", log)
         except:
@@ -130,7 +130,7 @@ class parser:
 
             query = self.prompt_merge.format(examples = example_prompt, log1=log1, log2=log2)
 
-            ret = self.llm.predict(query)
+            ret = self.llm.invoke(query)
             ret = get_template(template=ret)
             response = self.parse_result(ret)
 

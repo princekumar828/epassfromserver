@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Deleting errant node 15 as if -NONE-: 1.3 ISO-2022-KR",
+    "template": "Deleting errant node <*> as if -NONE-: <*> <*>",
+    "Postive_Example": "Deleting errant node 9 as if -NONE-: 0.4 Big5",
+    "Negative_Example": "Adjusting end char offset from 128 to 0"
+  },
+  {
+    "content": "Illegal access java.lang.reflect.InvocationTargetException: Method threw 'java.lang.IllegalArgumentException' exception.",
+    "template": "Illegal access <*>",
+    "Postive_Example": "Illegal access android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=content://com.example.provider/images/1 }",
+    "Negative_Example": "Initialized tokenizer factory: org.apache.lucene.analysis.core.WhitespaceTokenizerFactory"
+  },
+  {
+    "content": "Caught exception creating Arabic normalizer map: java.io.FileNotFoundException: arabic.map (No such file or directory)",
+    "template": "Caught exception creating Arabic normalizer map: <*>",
+    "Postive_Example": "Caught exception creating Arabic normalizer map: java.lang.Error",
+    "Negative_Example": "Parse exception while reading archive.zip"
+  },
+  {
+    "content": "Couldn't build object from line: animal=cat breed=Persian name=Fluffy",
+    "template": "Couldn't build object from line: <*>",
+    "Postive_Example": "Couldn't build object from line: food=pizza size=large toppings=cheese, pepperoni, mushrooms",
+    "Negative_Example": "Reading in trees from /tmp/testTreebankPath"
+  },
+  {
+    "content": "Gold entity list does not contain words \"Microsoft\" for label \"ORGANIZATION\". *****Assuming them as negative.******",
+    "template": "Gold entity list does not contain words <*> for label <*>. *****Assuming them as negative.******",
+    "Postive_Example": "Gold entity list does not contain words \"3.14\" for label \"NUMBER\". *****Assuming them as negative.******",
+    "Negative_Example": "No extractions in: \"stdin\".equals(\"slide.pptx\") ? document : \"slide.pptx\""
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Executor service did not terminate in the specified time 2 sec. Exception: java.lang.StringIndexOutOfBoundsException",
+    "template": "Executor service did not terminate in the specified time <*> sec. Exception: <*>",
+    "Postive_Example": "Executor service did not terminate in the specified time 1 sec. Exception: java.lang.StackOverflowError",
+    "Negative_Example": "Failed to cancel metastore delegation token for jobId=1122 java.lang.IllegalArgumentException"
+  },
+  {
+    "content": "Setting permission for path dest /media/cdrom/file3.txt from source /home/user6/file3.txt owner user6 : cdrom : r-xr-xr-x",
+    "template": "Setting permission for path dest <*> from source <*> owner <*> : <*> : <*>",
+    "Postive_Example": "Setting permission for path dest /lib/modules/5.10.0-9-amd64/kernel/drivers/net/ethernet/intel/e1000e/e1000e.ko from source /usr/src/linux-headers-5.10.0-9-amd64/drivers/net/ethernet/intel/e1000e/e1000e.ko owner root : root : rwxr-xr-x",
+    "Negative_Example": "Handling move session event: moveSession_6 , Convert to Delayed Move: true"
+  },
+  {
+    "content": "Column 'comments' is NULL. Will write NULL instead. Only 1 such message per type/column is emitted.",
+    "template": "<*> Will write NULL instead. Only 1 such message per type/column is emitted.",
+    "Postive_Example": "Column 'marital_status' is NULL. Will write NULL instead. Only 1 such message per type/column is emitted.",
+    "Negative_Example": "Unsupported type: blob encountered in metadata optimizer for column : image"
+  },
+  {
+    "content": "Checking tokens, count: 2",
+    "template": "Checking tokens, count: <*>",
+    "Postive_Example": "Checking tokens, count: 10",
+    "Negative_Example": "Evicting success at 20:10:10"
+  },
+  {
+    "content": "Exception getting db version:junit.framework.AssertionFailedError: Expected 1.0 but was 0.9",
+    "template": "Exception getting db version:<*>",
+    "Postive_Example": "Exception getting db version:javax.persistence.PersistenceException: No Persistence provider for EntityManager named test",
+    "Negative_Example": "Generating diff failed: IOException: Failed to read from input stream"
+  }
+]

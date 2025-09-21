@@ -1,0 +1,32 @@
+[
+  {
+    "content": "[User] Found stale index [123]. Cleaning it up",
+    "template": "[<*>] Found stale index [<*>]. Cleaning it up",
+    "Postive_Example": "[metadata.name()] Found stale index [indexSnId]. Cleaning it up",
+    "Negative_Example": "Checking static index coupon"
+  },
+  {
+    "content": "Failed to load repository data generation [16] because a concurrent operation moved the current generation to [17] java.io.SyncFailedException",
+    "template": "Failed to load repository data generation [<*>] because a concurrent operation moved the current generation to [<*>] <*>",
+    "Postive_Example": "Failed to load repository data generation [9] because a concurrent operation moved the current generation to [10] java.util.ConcurrentModificationException",
+    "Negative_Example": "Failed to call listener on global ordinals loading java.lang.SecurityException"
+  },
+  {
+    "content": "--> make sure shards are only allocated on tag1 with value1 and value2",
+    "template": "--> make sure shards are only allocated on tag1 with value1 and value2",
+    "Postive_Example": "--> make sure shards are only allocated on tag1 with value1 and value2",
+    "Negative_Example": "--> start the shards (only primaries)"
+  },
+  {
+    "content": "local tasks [{\"id\":11,\"state\": \"FAILED\", \"start_time\": \"2023-10-26T03:48:34,567Z\", \"end_time\": \"2023-10-26T03:49:12,789Z\", \"failure_reason\": \"IOException\", \"node\":{\"id\": \"node-11\", \"name\": \"Node 11\", \"host\": \"192,168,0,11\", \"port\": 8080}}]",
+    "template": "local tasks [<*>]",
+    "Postive_Example": "local tasks [{\"id\":5,\"state\":\"RUNNING\",\"start_time\":\"2023-10-26T03:54:12.345Z\",\"node\":{\"id\":\"node-5\",\"name\":\"Node 5\",\"host\":\"192.168.0.5\",\"port\":8080}}]",
+    "Negative_Example": "error while reading response for trace purposes java.io.EOFException: End of input at line 1 column 1 path $"
+  },
+  {
+    "content": "shard_6 becoming primary of index_6 with missing lease: [term=2, version=3, source=recovery from store]",
+    "template": "<*> becoming primary of <*> with missing lease: <*>",
+    "Postive_Example": "shard_14 becoming primary of index_14 with missing lease: [term=3, version=4, source=create settings]",
+    "Negative_Example": "[shard14] writing shard state, reason [deleted]"
+  }
+]

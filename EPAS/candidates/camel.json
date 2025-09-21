@@ -1,0 +1,32 @@
+[
+  {
+    "content": "camel/components/camel-salesforce/test-salesforce-login.properties",
+    "template": "camel/components/camel-salesforce/test-salesforce-login.properties",
+    "Postive_Example": "camel/components/camel-salesforce/test-salesforce-login.properties",
+    "Negative_Example": "changeCommentMessage: comment contains profanity"
+  },
+  {
+    "content": "Stopping the LUMBERJACK server (host=www.lumberjack.net, port=8001).",
+    "template": "Stopping the LUMBERJACK server (host=<*>, port=<*>).",
+    "Postive_Example": "Stopping the LUMBERJACK server (host=server.example.com, port=443).",
+    "Negative_Example": "Creating 9 consumer tasks with poll timeout 300 ms."
+  },
+  {
+    "content": "Skipping OSGi bundle: jar:file:/home/alice/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar!/",
+    "template": "Skipping OSGi bundle: <*>",
+    "Postive_Example": "Skipping OSGi bundle: osgi.identity;osgi.identity=\"org.apache.felix.scr\";type=\"osgi.bundle\";version:Version=\"2.1.24\"",
+    "Negative_Example": "Resolving JGroupsraft handle jgroupsraft://172.16.0.2:4040"
+  },
+  {
+    "content": "Writing Acknowledgement You have requested a password reset for your Gmail account. To reset your password, follow the instructions in the email we sent you.",
+    "template": "Writing Acknowledgement <*>",
+    "Postive_Example": "Writing Acknowledgement You have uploaded a new video on YouTube. Your video title is \"How to make a cake in 5 minutes\". To edit or delete your video, go to your channel page.",
+    "Negative_Example": "Optimising toD via SendDynamicAware component: mailto to use static uri: /static/mail/message.html"
+  },
+  {
+    "content": "Using route builder from the created context: org.apache.camel.impl.DefaultCamelContext@378bf509",
+    "template": "Using route builder from the created context: <*>",
+    "Postive_Example": "Using route builder from the created context: org.apache.camel.impl.DefaultCamelContext@5f150435",
+    "Negative_Example": "StreamCaching is disabled on CamelContext: demo"
+  }
+]

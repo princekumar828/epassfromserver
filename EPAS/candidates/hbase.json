@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Scanning META starting at row= rating6 stopping at row= rating11 for max= 800 with caching= false",
+    "template": "Scanning META starting at row= <*> stopping at row= <*> for max= <*> with caching= <*>",
+    "Postive_Example": "Scanning META starting at row= customer7 stopping at row= customer13 for max= 900 with caching= true",
+    "Negative_Example": "Scan for key range 0x50 - 0x5F returned 10 rows"
+  },
+  {
+    "content": "FAILED FOR r=[]",
+    "template": "FAILED FOR <*>",
+    "Postive_Example": "FAILED FOR r=function() {return 0;}",
+    "Negative_Example": "APPEND true"
+  },
+  {
+    "content": "`readLine() is deprecated, please use Scanner.nextLine() instead",
+    "template": "<*> is deprecated, please use <*> instead",
+    "Postive_Example": "`printStackTrace() is deprecated, please use Logger.printStackTrace() instead",
+    "Negative_Example": "Creating external block cache of type: ARC"
+  },
+  {
+    "content": "1313 to jdbc:h2:file:test inactive for 15000 ms; closing (Will reconnect when new requests)",
+    "template": "<*> to <*> inactive for <*> ms; closing (Will reconnect when new requests)",
+    "Postive_Example": "9090 to jdbc:sqlserver://192.168.1.102;databaseName=test inactive for 45000 ms; closing (Will reconnect when new requests)",
+    "Negative_Example": "Unable to access specified class filterName LinkageError"
+  },
+  {
+    "content": "Removing coprocessor 'com.cloudera.impala.hbase.HBaseScanNode$HBaseScanNodeImpl$HBaseScanNodeCoprocEndpointImpl' from table 'impala_table' (com.cloudera.impala.common.ImpalaRuntimeException: Impala scan node error)",
+    "template": "Removing coprocessor '<*>' from table '<*>'<*>",
+    "Postive_Example": "Removing coprocessor 'org.apache.hadoop.hbase.coprocessor.MasterObserver' from table 'config' (java.lang.SecurityException: Master observer not authorized)",
+    "Negative_Example": "Not stopping coprocessor org.apache.hadoop.hbase.coprocessor.SnapshotObserver because not active (state= FAILED )"
+  }
+]

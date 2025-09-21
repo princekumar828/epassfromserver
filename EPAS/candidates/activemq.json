@@ -1,0 +1,32 @@
+[
+  {
+    "content": "delivering pending commit outcome for tid: 0x0000000000000001",
+    "template": "delivering pending commit outcome for tid: <*>",
+    "Postive_Example": "delivering pending commit outcome for tid: 0x123456789ABCDEF0",
+    "Negative_Example": "Received the frame: 0x00001001"
+  },
+  {
+    "content": "Consumer (inventoryQueue) Caught: java.sql.SQLException",
+    "template": "Consumer (<*>) Caught: <*>",
+    "Postive_Example": "Consumer (orderQueue) Caught: java.util.ConcurrentModificationException",
+    "Negative_Example": "The local Exception was: NullPointerException"
+  },
+  {
+    "content": "New connection for broker1: client IP: 192.168.4.90, port: 61613, protocol: MQTT",
+    "template": "New connection for broker1: <*>",
+    "Postive_Example": "New connection for broker1: client IP: 10:0:4:145: port: 5672: protocol: STOMP",
+    "Negative_Example": "JMS exception on closing consumer after request with one-shot mode true"
+  },
+  {
+    "content": "Failed to stop MQTT transport org.eclipse.paho.client.mqttv3.MqttException: Timed out waiting for a response from the server",
+    "template": "Failed to stop MQTT transport <*>",
+    "Postive_Example": "Failed to stop MQTT transport java.net.UnknownHostException: Unable to resolve host \"mqtt.example.com\": No address associated with hostname",
+    "Negative_Example": "Exception encountered closing JMS Connection javax.jms.IllegalStateException: The Session is closed"
+  },
+  {
+    "content": "JmsConnector handling loss of connection [{id=ID:localhost-6789, clientId=client7, transport=Transport: nio://localhost/127.0.0.1:61618}]",
+    "template": "JmsConnector handling loss of connection [<*>]",
+    "Postive_Example": "JmsConnector handling loss of connection [{id=ID:remotehost-4567, clientId=client11, transport=Transport: fanout:(ssl://remotehost/192.168.1.103:61617,tcp://remotehost/192.168.1.104:61616)]",
+    "Negative_Example": "Could not create pooled connection factory: fanout:(static:(tcp://host1:61616,tcp://host2:61616))"
+  }
+]
