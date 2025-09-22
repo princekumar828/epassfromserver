@@ -1,0 +1,130 @@
+[
+    {
+        "content": "Done Cluster Health, status clusterHealth.getStatus()=DOWN",
+        "template": "Done Cluster Health, status <*>"
+    },
+    {
+        "content": "testRelocationWhileIndexingRandom(numRelocations= 6 , numberOfReplicas= 3 , numberOfNodes= 10 )",
+        "template": "testRelocationWhileIndexingRandom(numRelocations= <*> , numberOfReplicas= <*> , numberOfNodes= <*> )"
+    },
+    {
+        "content": "failed to remove weighted routing metadata from cluster state org.elasticsearch.index.IndexNotFoundException: no such index [test]",
+        "template": "failed to remove weighted routing metadata from cluster state <*>"
+    },
+    {
+        "content": "failed to read latest segment infos on flush java.io.FileNotFoundException: /var/log/elasticsearch/index_1/_0.cfs (No such file or directory)",
+        "template": "failed to read latest segment infos on flush <*>"
+    },
+    {
+        "content": "Your repository metadata blob for repository [data-analysis] is larger than 5MB. Consider moving to a fresh repository for new snapshots or deleting unneeded snapshots from your repository to ensure stable repository behavior going forward.",
+        "template": "Your repository metadata blob for repository [<*>] is larger than 5MB. Consider moving to a fresh repository for new snapshots or deleting unneeded snapshots from your repository to ensure stable repository behavior going forward."
+    },
+    {
+        "content": "using max_chunk_size[131072], max_header_size[65536], max_initial_line_length[16384], max_content_length[16777216], pipelining_max_events[1600]",
+        "template": "using max_chunk_size[<*>], max_header_size[<*>], max_initial_line_length[<*>], max_content_length[<*>], pipelining_max_events[<*>]"
+    },
+    {
+        "content": "Engine is already closed. java.lang.OutOfMemoryError: Failed to allocate a 16 byte allocation with 0 free bytes and 3GB until OOM",
+        "template": "Engine is already closed. <*>"
+    },
+    {
+        "content": "skip local recovery as the index was closed or not allowed to write; safe commit [CommitPoint{segmentCount=11, generation=31, userData={translog_uuid=i9dee8h0-egd2-8fi2-gahf-ahdg7e9b9b7f, translog_generation=30, max_seq_no=130, min_seq_no=110, global_checkpoint=129}}] global checkpoint [129]",
+        "template": "skip local recovery as the index was closed or not allowed to write; safe commit <*> global checkpoint <*>"
+    },
+    {
+        "content": "local tasks [{\"id\":13,\"state\": \"RUNNING\", \"start_time\": \"2023-10-26T03:46:12,345Z\", \"node\":{\"id\": \"node-13\", \"name\": \"Node 13\", \"host\": \"192,168,0,13\", \"port\": 8080}}]",
+        "template": "local tasks [<*>]"
+    },
+    {
+        "content": "--> Simulate GCE API response for [https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central1-a/operations/operation-1634794603-6e9f3a8c]",
+        "template": "--> Simulate GCE API response for [<*>]"
+    },
+    {
+        "content": "Resetting repository generation tracker because we failed to read generation [15] java.io.ObjectStreamException",
+        "template": "Resetting repository generation tracker because we failed to read generation [<*>] <*>"
+    },
+    {
+        "content": "will try to reestablish recovery with id [a7b3] in [5 seconds] (reason [connection lost])",
+        "template": "will try to reestablish recovery with id [<*>] in [<*>] (reason [<*>])"
+    },
+    {
+        "content": "changing max_merge_at_once from [12] to [16] because segments_per_tier [18] has to be higher or equal to it",
+        "template": "changing max_merge_at_once from [<*>] to [<*>] because segments_per_tier [<*>] has to be higher or equal to it"
+    },
+    {
+        "content": "Plugin 'opensearch.pluginzip' is applied but no ' opensearch-index-management ' publication is defined.",
+        "template": "Plugin 'opensearch.pluginzip' is applied but no ' <*> ' publication is defined."
+    },
+    {
+        "content": "The specified location [/var/log/elasticsearch] doesn't start with any repository paths specified by the path.repo setting: [/home/snapshots,/data/backups]",
+        "template": "The specified location [<*>] doesn't start with any repository paths specified by the path.repo setting: [<*>]"
+    },
+    {
+        "content": "turn off the translog retention for the replication group [5] as it starts using retention leases exclusively in peer recoveries",
+        "template": "turn off the translog retention for the replication group <*> as it starts using retention leases exclusively in peer recoveries"
+    },
+    {
+        "content": "check index failed during fetch seqNo: java.lang.IllegalArgumentException: Invalid sequence number -1",
+        "template": "check index failed during fetch seqNo: <*>"
+    },
+    {
+        "content": "[index7, index8, index9, index10] indices closed, but the operation timed out while waiting for enough shards to be started.",
+        "template": "[<*>] indices closed, but the operation timed out while waiting for enough shards to be started."
+    },
+    {
+        "content": "Could not find a readable index-N file in a non-empty shard snapshot directory [/usr/local/elasticsearch/data/nodes/0/indices/Nhj8n5NkQgWx9fz3JkYg4A/6]",
+        "template": "Could not find a readable index-N file in a non-empty shard snapshot directory [<*>]"
+    },
+    {
+        "content": "verification of shards for 11 succeeded, but block finalization already occurred (possibly for another block) [true]",
+        "template": "verification of shards for <*> succeeded, but block finalization already occurred (possibly for another block) [<*>]"
+    },
+    {
+        "content": "processing [cluster update task: delete indices [[.monitoring-es-7-2023.10.27]]]: ignoring, cluster applier service not started",
+        "template": "processing [<*>]: ignoring, cluster applier service not started"
+    },
+    {
+        "content": "failed to remove weighted routing metadata from cluster state org.elasticsearch.common.breaker.CircuitBreakingException: [parent] Data too large, data for [<transport_request>] would be [123456789/117.7mb], which is larger than the limit of [12345678/11.7mb]",
+        "template": "failed to remove weighted routing metadata from cluster state <*>"
+    },
+    {
+        "content": "registering decommission metadata [decommissionAttributeMetadata{attributeId=10, attributeType=NULL, attributeValue=null}] to execute action",
+        "template": "registering decommission metadata [<*>] to execute action"
+    },
+    {
+        "content": "extracted content: {\"title\": \"How to generate simulated logs\", \"body\": \"The log consists of the constant Template and the abstract variable Parameter...\"}",
+        "template": "extracted content: <*>"
+    },
+    {
+        "content": "Rest tests for project [src/test/java/com/example/modelTest] will be copied to the test resources from the published jar (version: [1.1.4]).",
+        "template": "Rest tests for project [<*>] will be copied to the test resources from the published jar (version: [<*>])."
+    },
+    {
+        "content": "failed to remove weighted routing metadata from cluster state org.elasticsearch.cluster.block.ClusterBlockException: Cluster blocked by [SERVICE_UNAVAILABLE/1/state not recovered / initialized]",
+        "template": "failed to remove weighted routing metadata from cluster state <*>"
+    },
+    {
+        "content": "createMissingPeerRecoveryRetentionLeases: adding missing lease for [shardId[[messages][11], node[11], [R], s[UNASSIGNED], a[id=11]]]",
+        "template": "createMissingPeerRecoveryRetentionLeases: adding missing lease for <*>"
+    },
+    {
+        "content": "Exception from http client org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused",
+        "template": "Exception from http client <*>"
+    },
+    {
+        "content": "The exception from request processor [Aggregator] in the search pipeline [analytics] was ignored java.sql.SQLException",
+        "template": "The exception from request processor [<*>] in the search pipeline [<*>] was ignored <*>"
+    },
+    {
+        "content": "error notifying global checkpoint listener of timeout: org.elasticsearch.index.engine.EngineClosedException",
+        "template": "error notifying global checkpoint listener of timeout: <*>"
+    },
+    {
+        "content": "Failed to create working dir using hard links. Falling back to copy org.apache.commons.io.FileUtils$FileDeleteStrategy$ForceFileDeleteStrategy$1: Unable to force delete file: /tmp/workdir/file.txt",
+        "template": "Failed to create working dir using hard links. Falling back to copy <*>"
+    },
+    {
+        "content": "now start initializing shards and expect exactly one rebalance from node1 to node 2 since index [test] is all on node1",
+        "template": "now start initializing shards and expect exactly one rebalance from node1 to node 2 since index [test] is all on node1"
+    }
+]

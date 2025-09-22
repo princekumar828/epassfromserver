@@ -1,32 +1,194 @@
 [
-  {
-    "content": "Scanning META starting at row= rating6 stopping at row= rating11 for max= 800 with caching= false",
-    "template": "Scanning META starting at row= <*> stopping at row= <*> for max= <*> with caching= <*>",
-    "Postive_Example": "Scanning META starting at row= customer7 stopping at row= customer13 for max= 900 with caching= true",
-    "Negative_Example": "Scan for key range 0x50 - 0x5F returned 10 rows"
-  },
-  {
-    "content": "FAILED FOR r=[]",
-    "template": "FAILED FOR <*>",
-    "Postive_Example": "FAILED FOR r=function() {return 0;}",
-    "Negative_Example": "APPEND true"
-  },
-  {
-    "content": "`readLine() is deprecated, please use Scanner.nextLine() instead",
-    "template": "<*> is deprecated, please use <*> instead",
-    "Postive_Example": "`printStackTrace() is deprecated, please use Logger.printStackTrace() instead",
-    "Negative_Example": "Creating external block cache of type: ARC"
-  },
-  {
-    "content": "1313 to jdbc:h2:file:test inactive for 15000 ms; closing (Will reconnect when new requests)",
-    "template": "<*> to <*> inactive for <*> ms; closing (Will reconnect when new requests)",
-    "Postive_Example": "9090 to jdbc:sqlserver://192.168.1.102;databaseName=test inactive for 45000 ms; closing (Will reconnect when new requests)",
-    "Negative_Example": "Unable to access specified class filterName LinkageError"
-  },
-  {
-    "content": "Removing coprocessor 'com.cloudera.impala.hbase.HBaseScanNode$HBaseScanNodeImpl$HBaseScanNodeCoprocEndpointImpl' from table 'impala_table' (com.cloudera.impala.common.ImpalaRuntimeException: Impala scan node error)",
-    "template": "Removing coprocessor '<*>' from table '<*>'<*>",
-    "Postive_Example": "Removing coprocessor 'org.apache.hadoop.hbase.coprocessor.MasterObserver' from table 'config' (java.lang.SecurityException: Master observer not authorized)",
-    "Negative_Example": "Not stopping coprocessor org.apache.hadoop.hbase.coprocessor.SnapshotObserver because not active (state= FAILED )"
-  }
+    {
+        "content": "RMI TCP Connection(1)-127.0.0.1 : stopped",
+        "template": "<*> : stopped",
+        "Postive_Example": "main : stopped",
+        "Negative_Example": "Format: 11.9.10"
+    },
+    {
+        "content": "An error occurred while verifying if [/usr/local/lib] is a valid directory. Returning 'not valid' and continuing. java.nio.file.DirectoryNotEmptyException: /usr/local/lib",
+        "template": "An error occurred while verifying if [<*>] is a valid directory. Returning 'not valid' and continuing. <*>",
+        "Postive_Example": "An error occurred while verifying if [F:\\music] is a valid directory. Returning 'not valid' and continuing. java.io.InvalidPathException: Illegal char <*> at index 2: F:\\music",
+        "Negative_Example": "Error while putting records: redis.clients.jedis.exceptions.JedisConnectionException"
+    },
+    {
+        "content": "Canonical hostname for SASL principal is the same with IP address: admin-01, admin-01. Check DNS configuration or consider SecurityConstants.UNSAFE_HBASE_CLIENT_KERBEROS_HOSTNAME_DISABLE_REVERSEDNS=true",
+        "template": "Canonical hostname for SASL principal is the same with IP address: <*>, <*>. Check DNS configuration or consider SecurityConstants.UNSAFE_HBASE_CLIENT_KERBEROS_HOSTNAME_DISABLE_REVERSEDNS=true",
+        "Postive_Example": "Canonical hostname for SASL principal is the same with IP address: hbase-master, hbase-master. Check DNS configuration or consider SecurityConstants.UNSAFE_HBASE_CLIENT_KERBEROS_HOSTNAME_DISABLE_REVERSEDNS=true",
+        "Negative_Example": "Failed to update the row with key = [cart103], since we could not get the original row"
+    },
+    {
+        "content": "Copying coprocessor jar '/var/log/hbase/coprocessors/log-analyzer-coprocessor.jar' to '/tmp/log/hbase/coprocessors/log-analyzer-coprocessor.jar'.",
+        "template": "Copying coprocessor jar '<*>' to '<*>'.",
+        "Postive_Example": "Copying coprocessor jar '/var/cache/apt/archives/openjdk-8-jre-headless_8u292-b10-0ubuntu1~18.04_amd64.deb' to '/tmp/cache/apt/archives/openjdk-8-jre-headless_8u292-b10-0ubuntu1~18.04_amd64.deb'.",
+        "Negative_Example": "Closing region eu-west-2 during a graceful stop, and cache persistence is on, so setting evict on close to false."
+    },
+    {
+        "content": "SASL client doing encrypted handshake for addr = 172.16.0.11:50030, datanodeId = DatanodeInfoWithStorage[172.16.0.11:50030,DS-6e7f3f0g-8f01-42b5-fg53-2k0g3d9f8d1h,DISK]",
+        "template": "SASL client doing encrypted handshake for addr = <*>, datanodeId = <*>",
+        "Postive_Example": "SASL client doing encrypted handshake for addr = 10.0.0.8:50020, datanodeId = DatanodeInfoWithStorage[10.0.0.8:50020,DS-9f7g0g0g-h67-4e9d-d0g9-hg0h9g0h-hjhgjhgjhghjghjghjghjghjghjghjghjghjghjghjghjghjghjghjghjghjghjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhggjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhg,DISK]",
+        "Negative_Example": "SASL client skipping handshake in unsecured configuration for addr = 192.168.5.105, datanodeId = DatanodeInfoWithStorage[192.168.5.105:50130,DS-kfcfbfba-4f4c-4d6e-a3bc-f9b6faf7b2c7,DISK]"
+    },
+    {
+        "content": "rows Rows each client runs. Default: 4000 . In case of randomReads and randomSeekScans this could be specified along with --size to specify the number of rows to be scanned within the total range specified by the size.",
+        "template": "rows Rows each client runs. Default: <*> . In case of randomReads and randomSeekScans this could be specified along with --size to specify the number of rows to be scanned within the total range specified by the size.",
+        "Postive_Example": "rows Rows each client runs. Default: 5500 . In case of randomReads and randomSeekScans this could be specified along with --size to specify the number of rows to be scanned within the total range specified by the size.",
+        "Negative_Example": "got an exception while reading the procedure WAL org.apache.hadoop.hbase.exceptions.TimeoutIOException: Timeout waiting for data from server"
+    },
+    {
+        "content": "Found existing old file: /proc/dir . It could be some leftover of an old installation. It should be a folder instead. So moving it to /tmp",
+        "template": "Found existing old file: <*> . It could be some leftover of an old installation. It should be a folder instead. So moving it to <*>",
+        "Postive_Example": "Found existing old file: C:\\Users\\Alice\\Documents\\dir . It could be some leftover of an old installation. It should be a folder instead. So moving it to C:\\Users\\Alice\\AppData\\Local\\Temp\\tmp",
+        "Negative_Example": "Requesting log roll because of file size threshold; length=2048, logrollsize=2000"
+    },
+    {
+        "content": "3c4d5e6 : Received a bulk load marker from primary, but the family is not found. Ignoring. StoreDescriptor: {name=ff, blocksize=8192, bloomType=ROWPREFIX_FIXED_LENGTH, compression=SNAPPY, inMemory=true}",
+        "template": "<*> : Received a bulk load marker from primary, but the family is not found. Ignoring. StoreDescriptor: <*>",
+        "Postive_Example": "0i1j2k3 : Received a bulk load marker from primary, but the family is not found. Ignoring. StoreDescriptor: {name=qf , blocksize =64 , bloomType =ROW , compression =NONE , inMemory =false }",
+        "Negative_Example": "Unable to roll the log org.apache.logging.log4j.core.appender.AppenderRuntimeException: Failed to compress log file"
+    },
+    {
+        "content": "Exception details for failure to load WALProvider. android.database.sqlite.SQLiteDatabaseLockedException: database is locked (code 5)",
+        "template": "Exception details for failure to load WALProvider. <*>",
+        "Postive_Example": "Exception details for failure to load WALProvider. java.lang.NoSuchMethodError: No static method getInstance()Lcom/example/WALProvider; in class Lcom/example/WALProvider; or its super classes (declaration of 'com.example.WALProvider' appears in /data/app/com.example-1/base.apk)",
+        "Negative_Example": "Failed while closing store file /root/.bashrc: java.io.IOException: Access denied"
+    },
+    {
+        "content": "9c1d2e3b : Skipping replaying region event :{ encodedRegionName: \"9c1d2e3b\" eventType: MERGE } because its sequence id is smaller than this regions lastReplayedOpenRegionSeqId  of 4096",
+        "template": "<*> : Skipping replaying region event :<*> because its sequence id is smaller than this regions lastReplayedOpenRegionSeqId  of <*>",
+        "Postive_Example": "i8g90j1k : Skipping replaying region event :{ encodedRegionName: \"i8g90j1k\" eventType: COMPACT } because its sequence id is smaller than this regions lastReplayedOpenRegionSeqId  of 524288",
+        "Negative_Example": "The opening for region AF-South-1 was done before we could cancel it. Doing a standard close now"
+    },
+    {
+        "content": "Loaded HFile /hbase/data/default/table4/region4/family4/4567890123 into region4 as /hbase/archive/data/default/table4/region4/family4/4567890123 - updating store file list.",
+        "template": "Loaded HFile <*> into <*> as <*> - updating store file list.",
+        "Postive_Example": "Loaded HFile /hbase/data/test/table11/region11/family11/aabbccddeeff0011 into region11 as /hbase/archive/data/test/table11/region11/family11/aabbccddeeff0011 - updating store file list.",
+        "Negative_Example": "Node /lib/modules/5.4.0-91-generic/kernel/drivers/net/ethernet/intel/e1000e/e1000e.ko already exists"
+    },
+    {
+        "content": "Configuration \"dfs.client.read.shortcircuit.skip.checksum\" should not be set to true. HBase checksum doesn't require it, see https://issues.apache.org/jira/browse/HBASE-6868. This option is only useful for non-HBase applications that use HDFS directly.",
+        "template": "Configuration \"dfs.client.read.shortcircuit.skip.checksum\" should not be set to true. <*>",
+        "Postive_Example": "Configuration \"dfs.client.read.shortcircuit.skip.checksum\" should not be set to true. This may cause unexpected behavior or failures in your HBase cluster, see https://issues.apache.org/jira/browse/HBASE-6868.",
+        "Negative_Example": "Requesting log roll because we exceeded slow sync threshold; time=23 ms, threshold=18 ms, current pipeline: [read, write]"
+    },
+    {
+        "content": "Unable to load configured flush throughput controller 'com.cassandra.CustomFlushController', load default throughput controller org.apache.cassandra.db.commitlog.PeriodicCommitLogExecutorService instead java.lang.IllegalAccessException: Class org.apache.cassandra.config.DatabaseDescriptor can not access a member of class com.cassandra.CustomFlushController with modifiers \"private\"",
+        "template": "Unable to load configured flush throughput controller '<*>', load default throughput controller <*> instead <*>",
+        "Postive_Example": "Unable to load configured flush throughput controller 'null', load default throughput controller org.apache.cassandra.db.commitlog.PeriodicCommitLogExecutorService instead java.lang.NullPointerException",
+        "Negative_Example": "Command-line invocation of HBase Thrift server threw exception java.lang.IllegalArgumentException: Invalid thrift protocol specified. Valid options are binary, compact, json"
+    },
+    {
+        "content": "Error disposing of SASL server: java.lang.NoSuchMethodError: org.apache.hadoop.security.SaslRpcServer$SaslDigestCallbackHandler.<init>(Ljava/lang/String;Ljava/lang/String;)V",
+        "template": "Error disposing of SASL server: <*>",
+        "Postive_Example": "Error disposing of SASL server: org.apache.hadoop.security.authentication.client.AuthenticationException: GSSException: No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)",
+        "Negative_Example": "Error disposing of SASL client: javax.security.sasl.SaslException: Digest-challenge format violation"
+    },
+    {
+        "content": "Bloom filter turned off by CF config for /hbase/data/default/notification/2b1a0e9f8g7h6i5j4k3l2m/n/o/q/5p9q0r1s2t3u4v5w6x7y8z9a0b1c2d3e",
+        "template": "Bloom filter turned off by CF config for <*>",
+        "Postive_Example": "Bloom filter turned off by CF config for /hbase/data/default/product/3a1b4c5d6e2f7d8c9b0a3f4c5d6e7f8b/e/4e8d9f0b7c2a5d6f9e3b4c1a6e8d9f0b",
+        "Negative_Example": "Failed to fetch /products/4321/details.json InvalidURLError"
+    },
+    {
+        "content": "Unable to roll the log java.lang.SecurityException: Access to system property \"log4j.configurationFile\" is denied",
+        "template": "Unable to roll the log <*>",
+        "Postive_Example": "Unable to roll the log org.apache.logging.log4j.core.appender.AppenderLoggingException: Error writing to RandomAccessFile",
+        "Negative_Example": "Close output failed: java.io.UnsupportedEncodingException: Encoding not supported"
+    },
+    {
+        "content": "Command-line invocation of HBase Thrift server threw exception org.apache.hadoop.hbase.security.AccessDeniedException: Insufficient permissions for user 'hbase' (global, action=ADMIN)",
+        "template": "Command-line invocation of HBase Thrift server threw exception <*>",
+        "Postive_Example": "Command-line invocation of HBase Thrift server threw exception java.lang.OutOfMemoryError: Java heap space",
+        "Negative_Example": "Exception details for failure to fetch wal coprocessor information. java.lang.SecurityException: Access denied for user 'hbase'"
+    },
+    {
+        "content": "Requesting log roll because we exceeded slow sync threshold; time=19 ms, threshold=14 ms, current pipeline: [read, compress, encrypt, write]",
+        "template": "Requesting log roll because we exceeded slow sync threshold; time=<*> ms, threshold=<*> ms, current pipeline: <*>",
+        "Postive_Example": "Requesting log roll because we exceeded slow sync threshold; time=11 ms, threshold=6 ms, current pipeline: [read]",
+        "Negative_Example": "Waiting for there to be 10 regions, but there are 7 right now."
+    },
+    {
+        "content": "Inserter caught exception javax.validation.ConstraintViolationException: Validation failed for classes [com.example.Inserter] during persist time for groups [javax.validation.groups.Default, ]",
+        "template": "Inserter caught exception <*>",
+        "Postive_Example": "Inserter caught exception java.lang.NullPointerException",
+        "Negative_Example": "Truncate failed with exception: java.lang.ClassNotFoundException: com.example.MyClass"
+    },
+    {
+        "content": "Not stopping coprocessor org.apache.hadoop.hbase.coprocessor.WALObserver because not active (state= STOPPED )",
+        "template": "Not stopping coprocessor <*> because not active (state= <*> )",
+        "Postive_Example": "Not stopping coprocessor org.apache.hadoop.hbase.coprocessor.MultiRowMutationEndpoint because not active (state= ABORTED )",
+        "Negative_Example": "Close WAL failed org.apache.hadoop.hbase.regionserver.wal.WALTruncationException: WAL truncation failed"
+    },
+    {
+        "content": "Hadoop 3.2 and below use unshaded protobuf. Error: org.apache.hadoop.hive.serde2.SerDeException: org.codehaus.jackson.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')",
+        "template": "Hadoop 3.2 and below use unshaded protobuf. <*>",
+        "Postive_Example": "Hadoop 3.2 and below use unshaded protobuf. Error: java.lang.NoSuchMethodError: com.google.protobuf.Descriptors$Descriptor.getOneofs()Ljava/util/List;",
+        "Negative_Example": "Loading coprocessor class org.apache.hadoop.hbase.coprocessor.example.BulkDeleteEndpoint with path hdfs://localhost:9000/hbase/lib/hbase-examples.jar and priority 250"
+    },
+    {
+        "content": "versions= 5 , starttime= 2021-10-25 18:34:00 , endtime= 2021-10-25 18:39:00 , keepDeletedCells= false , visibility labels= private",
+        "template": "versions= <*> , starttime= <*> , endtime= <*> , keepDeletedCells= <*> , visibility labels= <*>",
+        "Postive_Example": "versions= 12 , starttime= 2021-10-25 18:49:45 , endtime= 2021-10-25 18:54:45 , keepDeletedCells= true , visibility labels= confidential",
+        "Negative_Example": "Restore snapshot acl to table. snapshot: [2023-10-18_03:30:00], table: [employees]"
+    },
+    {
+        "content": "Current backup has an incremental backup ancestor, touching its image manifest in /usr/local/backup/image/image-2023-10-26-03-32-38.manifest to construct the dependency.",
+        "template": "Current backup has an incremental backup ancestor, touching its image manifest in <*> to construct the dependency.",
+        "Postive_Example": "Current backup has an incremental backup ancestor, touching its image manifest in /dev/backup/image/image.img to construct the dependency.",
+        "Negative_Example": "Last dependent incremental backup image: {BackupID=1003 BackupDir=/home/user3/backup/}"
+    },
+    {
+        "content": "Slow datanode: 192.168.1.16:50010 , data length= 262144 , duration= 300 ms, unfinishedReplicas= 8 , lastAckTimestamp= 1634642447000 , monitor name: DataNodeMonitor",
+        "template": "Slow datanode: <*> , data length= <*> , duration= <*> ms, unfinishedReplicas= <*> , lastAckTimestamp= <*> , monitor name: <*>",
+        "Postive_Example": "Slow datanode: 192.168.1.21:50010 , data length= 8388608 , duration= 450 ms, unfinishedReplicas= 13 , lastAckTimestamp= 1634642452000 , monitor name: DataNodeMonitor",
+        "Negative_Example": "Unable to create default .tableinfo for transactions while missing column family information"
+    },
+    {
+        "content": "Failed to open reader when trying to compute store file size for /data/hbase/data/default/table-8/region-8/67890abcdef/family-7 , ignoring org.apache.hadoop.hbase.regionserver.wal.WALSplitter.CorruptedWALException",
+        "template": "Failed to open reader when trying to compute store file size for <*> , ignoring <*>",
+        "Postive_Example": "Failed to open reader when trying to compute store file size for /data/hbase/WALs/region-1/1234567890.log , ignoring java.io.FileNotFoundException",
+        "Negative_Example": "Failed to add slow/large log records to hbase:slowlog table. Error: TableNotFoundException"
+    },
+    {
+        "content": "Interrupted while waiting for the wal of 'eu-central-1' to roll. If later replication tests fail, it's probably because we should still be waiting.",
+        "template": "Interrupted while waiting for the wal of '<*>' to roll. If later replication tests fail, it's probably because we should still be waiting.",
+        "Postive_Example": "Interrupted while waiting for the wal of 'cn-northwest-1' to roll. If later replication tests fail, it's probably because we should still be waiting.",
+        "Negative_Example": "Store file doesn't fit into the tentative stripes - expected to start at [0x01], but starts at [0x02], to L0 it goes"
+    },
+    {
+        "content": "Restore incremental backup from directory /home/admin/backup/2021-10-21 from hbase tables admin,config to tables admin_old,config_old",
+        "template": "Restore <*> backup from directory <*> from hbase tables <*> to tables <*>",
+        "Postive_Example": "Restore full backup from directory /home/user/backup/2021-10-23 from hbase tables user,product,order to tables user_new,product_new,order_new",
+        "Negative_Example": "Backup set add: mirror_backup tables [employees salaries bonuses]"
+    },
+    {
+        "content": "Unexpected interrupted exception during bulk load org.apache.hadoop.hbase.ipc.RemoteWithExtrasException(org.apache.hadoop.hbase.RegionTooBusyException): Above memstore limit",
+        "template": "Unexpected interrupted exception during bulk load <*>",
+        "Postive_Example": "Unexpected interrupted exception during bulk load java.io.IOException: Stream closed",
+        "Negative_Example": "Truncate failed with exception: java.lang.UnsupportedOperationException: Operation not supported"
+    },
+    {
+        "content": "Failed find method getBlock in dfsclient; no hedged read metrics: java.io.IOException: Could not obtain block",
+        "template": "Failed find method <*> in dfsclient; no hedged read metrics: <*>",
+        "Postive_Example": "Failed find method recoverLease in dfsclient; no hedged read metrics: org.apache.hadoop.hdfs.protocol.AlreadyBeingCreatedException: failed to create file /test for DFSClient_NONMAPREDUCE on client 127.0.0.1, because this file is already being created by DFSClient_NONMAPREDUCE on 192.168.0.1",
+        "Negative_Example": "Unable to close region: the coprocessor launched an error exp: java.io.IOException"
+    },
+    {
+        "content": "Removed replica= 1515 of {ENCODED = >636f756e7465722d726567696f6e2d31352e646174, NAME = >'counter-region-15.dat', STARTKEY = >'', ENDKEY = >''}",
+        "template": "Removed replica= <*> of <*>",
+        "Postive_Example": "Removed replica= 4004 of {ENCODED => 617263686976652d726567696f6e2d342e646174, NAME => 'archive-region-4.dat', STARTKEY => '', ENDKEY => ''}",
+        "Negative_Example": "Written block # 167 of type DATA , uncompressed size 4096 , packed size 2048 at offset 61440"
+    },
+    {
+        "content": "Skipping hole fix; both the hole left-side and right-side RegionInfos are UNDEFINED; left=<RegionInfo: test,,2.1588230740>, right=<RegionInfo: test,,3.1588230740>",
+        "template": "Skipping hole fix; both the hole left-side and right-side RegionInfos are UNDEFINED; left=<<*>>, right=<<*>>",
+        "Postive_Example": "Skipping hole fix; both the hole left-side and right-side RegionInfos are UNDEFINED; left=<RegionInfo: default,,1.1588230740>, right=<RegionInfo: hbase:namespace,,1.1588230740>",
+        "Negative_Example": "Skipping hole fix; left-side endKey is not less than right-side startKey; left=<<o, 10>>, right=<<o, 10>>"
+    },
+    {
+        "content": "Trying to bulk load hfile /opt/hbase/data/test/table_4/hfile_14 with size: 1792 bytes can be problematic as it may lead to oversplitting.",
+        "template": "Trying to bulk load hfile <*> with size: <*> bytes can be problematic as it may lead to oversplitting.",
+        "Postive_Example": "Trying to bulk load hfile /home/hadoop/input/hfiles/partition_1/hfile_8 with size: 6144 bytes can be problematic as it may lead to oversplitting.",
+        "Negative_Example": "Unable to read directory /hbase/data/default/department/6789 ioe2"
+    }
 ]

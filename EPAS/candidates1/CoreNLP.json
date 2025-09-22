@@ -1,0 +1,130 @@
+[
+    {
+        "content": "Error setting up NER_COMBINER_NAME! Not applying NER tags!",
+        "template": "Error setting up <*>! Not applying NER tags!"
+    },
+    {
+        "content": "preTokenized option set: Annotators list starts with tokenize,ssplit, no change needed.",
+        "template": "preTokenized option set: Annotators list starts with tokenize,ssplit, no change needed."
+    },
+    {
+        "content": "PennTreeReader: warning: incomplete tree (extra left parentheses in input): (((WHNP-1 (-NONE- 0)) SINV|<MD Will> NP-SBJ|<PRP she> VP|<VB come>",
+        "template": "PennTreeReader: warning: incomplete tree (extra left parentheses in input): <*>"
+    },
+    {
+        "content": "CONLL MENTION GOLD FILE: /data/conll-2012/v4/data/dev/data/english/annotations/bn/cnn/03/cnn_0301.gold_conll",
+        "template": "CONLL MENTION GOLD FILE: <*>"
+    },
+    {
+        "content": "Sentence: The/cat/NP/NNS/SBJ/VP/VBD/quickly/RB/ADV/VP/VBD/jumped/over/the/fence/NP/NN/OBJ",
+        "template": "Sentence: <*>"
+    },
+    {
+        "content": "Relation extraction results AFTER consistency checks for partition #5 using printer org.apache.log4j.JMSAppender : Success",
+        "template": "Relation extraction results AFTER consistency checks for partition <*> using printer <*> : <*>"
+    },
+    {
+        "content": "Using relation extraction post processor: edu.stanford.nlp.ie.machinereading.MachineReadingProperties$NERRelationExtractorPostProcessor",
+        "template": "Using relation extraction post processor: <*>"
+    },
+    {
+        "content": "Loading sieve: ExactStringMatch from HybridCorefProperties.getPathModel(props, ExactStringMatch) ...",
+        "template": "Loading sieve: <*> from <*> ..."
+    },
+    {
+        "content": "For sentence s.get(CoreAnnotations.TextAnnotation.class) = \"She sells seashells by the seashore.\"",
+        "template": "For sentence <*>"
+    },
+    {
+        "content": "Parsing of sentence failed, possibly because of out of memory. Will ignore and continue: \"I think therefore I am.\"",
+        "template": "Parsing of sentence failed, possibly because of out of memory. Will ignore and continue: <*>"
+    },
+    {
+        "content": "Removing 10 patterns that do not meet minPosPhraseSupportForPat requirement of >= 0.7",
+        "template": "Removing <*> patterns that do not meet minPosPhraseSupportForPat requirement of >= <*>"
+    },
+    {
+        "content": "usage: RadicalMap [-rebuild <dict_file>] [-infile <file>] [-encoding <encoding>] [char]+",
+        "template": "usage: RadicalMap [-rebuild <dict_file>] [-infile <file>] [-encoding <encoding>] [char]+"
+    },
+    {
+        "content": "Loading entity extraction model from HuggingFace_Transformers_model.pth ...",
+        "template": "Loading entity extraction model from <*> ..."
+    },
+    {
+        "content": "CleanXML: ending tokens: [word=\"!\", tag=\".\", lemma=\"!\", ner=\"O\", speaker=\"PER0\", beginOffset=\"13\", endOffset=\"14\"]",
+        "template": "CleanXML: ending tokens: <*>"
+    },
+    {
+        "content": "DBG Done labeling provided sents in 0.34 seconds. Total # of tokens labeled: 456",
+        "template": "<*> Done labeling provided sents in <*>. Total # of tokens labeled: <*>"
+    },
+    {
+        "content": "Replacing old annotator \"Sentiment\" with signature [TextBlob, 0.16.0] with new annotator with signature [HuggingFace Transformers, 4.12]",
+        "template": "Replacing old annotator \"<*>\" with signature [<*>] with new annotator with signature [<*>]"
+    },
+    {
+        "content": "WARNING: QuantifiableEntityNormalizingAnnotator does not work well with collapse=true",
+        "template": "WARNING: QuantifiableEntityNormalizingAnnotator does not work well with collapse=true"
+    },
+    {
+        "content": "Created index with size 30. Don't worry if it's zero and you are using batch process sents.",
+        "template": "Created index with size <*>. Don't worry if it's zero and you are using batch process sents."
+    },
+    {
+        "content": "WARNING: buildGraphsProperty set to true, but org.apache.commons.cli.TLPParams does not support dependencies",
+        "template": "WARNING: <*> set to true, but <*> does not support dependencies"
+    },
+    {
+        "content": "ChineseUtils.normalize warning: unmatched high surrogate character U+ D80D in \"\\uD80D\\uDC00\\uD80D\\uDC01\\uD80D\\uDC02\\uD80D\"",
+        "template": "ChineseUtils.normalize warning: unmatched high surrogate character U+ <*> in <*>"
+    },
+    {
+        "content": "Datum Extraction failed in Sieve.java while processing document: 4004 part: 4",
+        "template": "Datum Extraction failed in Sieve.java while processing document: <*> part: <*>"
+    },
+    {
+        "content": "CustomerMapper : Unable to instantiate mapper type com.example.model.Customer",
+        "template": "<*> : Unable to instantiate mapper type <*>"
+    },
+    {
+        "content": "Caught exception creating Arabic normalizer map: java.nio.charset.MalformedInputException: Input length = 1",
+        "template": "Caught exception creating Arabic normalizer map: <*>"
+    },
+    {
+        "content": "Illegal access java.lang.IllegalAccessException: Class com.example.Main can not access a member of class com.example.Private with modifiers \"private\"",
+        "template": "Illegal access <*>"
+    },
+    {
+        "content": "Long Sentence: Four score and seven years ago our fathers brought forth on this continent a new nation.",
+        "template": "Long Sentence: <*>"
+    },
+    {
+        "content": "Empty top speakers list for: \"The only thing we have to fear is fear itself\" [no candidate top speakers found \u2013 just ignore!",
+        "template": "Empty top speakers list for: <*> [no candidate top speakers found \u2013 just ignore!"
+    },
+    {
+        "content": "Failed to use the given parser to reparse sentence \"He ran as fast as he could.\"",
+        "template": "Failed to use the given parser to reparse sentence \"<*>\""
+    },
+    {
+        "content": "debug-preprocessorWARNING: gold mentions with the same offsets: ip=10.0.3.13 mentions=g.mentionID=27,existingMentions=28, g.spanToString()=Facebook",
+        "template": "debug-preprocessorWARNING: gold mentions with the same offsets: <*> mentions=<*>,<*>, <*>"
+    },
+    {
+        "content": "CONLL MENTION PREDICTED FILE: /data/user10/conll2012/mention_pred_10.parquet",
+        "template": "CONLL MENTION PREDICTED FILE: <*>"
+    },
+    {
+        "content": "Relation extraction results for partition #9 using printer com.example.Printer@4d5e6f : Error: Printer jammed",
+        "template": "Relation extraction results <*> using printer <*> : <*>"
+    },
+    {
+        "content": "Tagging of sentence ran out of memory. Will ignore and continue: To be or not to be, that is the question.",
+        "template": "Tagging of sentence ran out of memory. Will ignore and continue: <*>"
+    },
+    {
+        "content": "ConstantsAndVariables.extremedebug For pattern with index 5 extracted the following sentences from the index 23",
+        "template": "<*> For pattern with index <*> extracted the following sentences from the index <*>"
+    }
+]

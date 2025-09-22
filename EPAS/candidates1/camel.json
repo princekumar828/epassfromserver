@@ -1,0 +1,130 @@
+[
+    {
+        "content": "Using TransformerFactoryClass org.apache.xml.serializer.TransformerIdentityImpl",
+        "template": "Using TransformerFactoryClass <*>"
+    },
+    {
+        "content": "Connecting to hdfs file-system hdfs://hadoop-slave1:54310 (may take a while if connection is not available)",
+        "template": "Connecting to hdfs file-system <*> (may take a while if connection is not available)"
+    },
+    {
+        "content": "Error occurred during shutdown of ExecutorService: eventBus. This exception will be ignored.java.lang.RuntimeException: EventBusException",
+        "template": "Error occurred during shutdown of ExecutorService: <*>. This exception will be ignored.<*>"
+    },
+    {
+        "content": "Created new CachedThreadPool for source: database with name: db_pool. -> Success",
+        "template": "Created new CachedThreadPool for source: <*> with name: <*>. -> <*>"
+    },
+    {
+        "content": "Breakpoint at node 7 is updating message header on exchangeId: 89c0d1 with header: Authorization and value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+        "template": "Breakpoint at node <*> is updating message header on exchangeId: <*> with header: <*> and value: <*>"
+    },
+    {
+        "content": "Cannot create/load TransformerFactory due: java.lang.ClassNotFoundException: org.apache.xalan.processor.TransformerFactoryImpl. Will attempt to use JDK fallback TransformerFactory: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl",
+        "template": "Cannot create/load TransformerFactory due: <*>. Will attempt to use JDK fallback TransformerFactory: <*>"
+    },
+    {
+        "content": "StreamCaching is not in use. If using streams then it's recommended to enable stream caching. See more details at https://camel.apache.org/stream-caching.html",
+        "template": "StreamCaching is not in use. If using streams then it's recommended to enable stream caching. See more details at https://camel.apache.org/stream-caching.html"
+    },
+    {
+        "content": "Reply received for unknown messageKey [y1z2a3]. The message will be ignored: {\"type\":\"info\",\"code\":\"202\",\"message\":\"Accepted\"}",
+        "template": "Reply received for unknown messageKey [<*>]. The message will be ignored: <*>"
+    },
+    {
+        "content": "Cannot restore JAAS Configuration. This exception is ignored. javax.security.auth.login.LoginException: No LoginModules configured for DefaultLogin",
+        "template": "Cannot restore JAAS Configuration. This exception is ignored. <*>"
+    },
+    {
+        "content": "Cannot load existing JAAS configuration: java.lang.IllegalArgumentException: Configuration Error: Line 12: expected [option key]",
+        "template": "Cannot load existing JAAS configuration: <*>"
+    },
+    {
+        "content": "executeSyncReport with metadata: reportResults=[{\"id\" :19, name: Risk Report, status: PENDING, duration: 0.0}, {\"id\" :20, name: Compliance Report, status SUCCESS, duration :11.4}]",
+        "template": "executeSyncReport with metadata: <*>"
+    },
+    {
+        "content": "Lifecycle strategy resume failed on CamelContext (myApp) due to: org.apache.camel.ResolveEndpointFailedException: Failed to resolve endpoint. This exception will be ignored",
+        "template": "Lifecycle strategy <*> failed on CamelContext (<*>) due to: <*>. This exception will be ignored"
+    },
+    {
+        "content": "Using 5 instances of same component class: android.widget.TextView with names: textView1, textView2, textView3, textView4, textView5",
+        "template": "Using <*> instances of same component class: <*> with names: <*>"
+    },
+    {
+        "content": "Error loading Saxon's net.sf.saxon.event.MessageWarner class from the classpath! <xsl:message> output will not be redirected to the ErrorListener!",
+        "template": "Error loading Saxon's net.sf.saxon.event.MessageWarner class from the classpath! <xsl:message> output will not be redirected to the ErrorListener!"
+    },
+    {
+        "content": "Request contains required header PROXY_AUTHORIZATION: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+        "template": "Request contains required header <*>"
+    },
+    {
+        "content": "Writing Acknowledgement You have won a free gift card from Amazon. To claim it, enter your email address and password here.",
+        "template": "Writing Acknowledgement <*>"
+    },
+    {
+        "content": "Sending aggregated exchange: Exchange[ExchangePattern: InOnly, BodyType: BigDecimal, Body:",
+        "template": "Sending aggregated exchange: <*>"
+    },
+    {
+        "content": "This consumer is idempotent and the file has been consumed before matching idempotentKey: 9f8e7d6c . Will skip this file: image.jpg",
+        "template": "This consumer is idempotent and the file has been consumed before matching idempotentKey: <*> . Will skip this file: <*>"
+    },
+    {
+        "content": "Updating topic [arn:aws:sns:us-east-1:123456789012:my-topic] with policy [{Version:2012-10-17,Statement:[{Effect:Allow,Principal:{AWS:*},Action:SNS:Publish,Resource:arn:aws:sns:us-east-1:123456789012:my-topic,Condition:{ArnLike:{AWS:SourceArn:arn:aws:s3:*:*:my-bucket}}}] }]",
+        "template": "Updating topic [<*>] with policy [<*>]"
+    },
+    {
+        "content": "Sending to endpoint: ldap://host/dc=example,dc=com?cn,sn,mail?sub?(objectClass=*) is intercepted and detoured to: ldap://host/dc=example,dc=com?cn,sn,mail?sub?(objectClass=person) for exchange: SEARCH /query",
+        "template": "Sending to endpoint: <*> is intercepted and detoured to: <*> for exchange: <*>"
+    },
+    {
+        "content": "Directory/File /tmp/cache/data.dat could not be read. This directory will not be indexed. Please check permissions and rebuild indexes.",
+        "template": "Directory/File <*> could not be read. This directory will not be indexed. Please check permissions and rebuild indexes."
+    },
+    {
+        "content": "Response received: {\"status\":201,\"message\":\"Created\",\"data\":{\"id\":1234,\"title\":\"Hello world\"}}",
+        "template": "Response received: <*>"
+    },
+    {
+        "content": "PubSub synchronous pull request cancelled com.google.api.gax.rpc.AbortedException: The operation was aborted.",
+        "template": "PubSub synchronous pull request cancelled <*>"
+    },
+    {
+        "content": "Cannot process event: ShipmentConfirmedEvent as its class type: com.example.ShipmentConfirmedEvent is not assignable with: com.example.ShipmentCancelledEvent",
+        "template": "Cannot process event: <*> as its class type: <*> is not assignable with: <*>"
+    },
+    {
+        "content": "You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? telnet://127.0.0.1:23/admin",
+        "template": "You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? <*>"
+    },
+    {
+        "content": "Error adjusting dumped XML file: history.xml due to Attribute name \"action\" associated with an element type \"event\" must be followed by the ' = ' character. . This exception is ignored. org.xml.sax.SAXParseException",
+        "template": "Error adjusting dumped XML file: <*> due to <*> . This exception is ignored. <*>"
+    },
+    {
+        "content": "More than one Logger.class.getName() instance found in the registry. Falling back to creating logger from URI smb://user:pass@host/share/log4j2.properties.",
+        "template": "More than one <*> instance found in the registry. Falling back to creating logger from URI <*>."
+    },
+    {
+        "content": "Attempted to create Saxon XPathFactory by creating a new instance of javax.xml.xpath.XPathFactory failed. Will fallback and create XPathFactory using JDK API. This exception is ignored (stacktrace in DEBUG logging level).",
+        "template": "Attempted to create Saxon XPathFactory by creating a new instance of <*> failed. Will fallback and create XPathFactory using JDK API. This exception is ignored (stacktrace in DEBUG logging level)."
+    },
+    {
+        "content": "ExecutorServiceRef batch not found in registry (as an ExecutorService instance) or as a thread pool profile, will default for stream.",
+        "template": "ExecutorServiceRef <*> not found in registry (as an ExecutorService instance) or as a thread pool profile, will default for <*>."
+    },
+    {
+        "content": "Consumer is suspended and shutdown is pending, so this consumer thread is breaking out because the task queue is empty.",
+        "template": "Consumer is suspended and shutdown is pending, so this consumer thread is breaking out because the task queue is empty."
+    },
+    {
+        "content": "Using com.google.appengine.api.files.dev.LocalFileService$LocalDBFactory implementation of org.iq80.leveldb.DBFactory",
+        "template": "Using <*> implementation of org.iq80.leveldb.DBFactory"
+    },
+    {
+        "content": "Lifecycle strategy CDICamelContextLifecycleStrategy vetoed initializing CamelContext (camel-9) due to: javax.enterprise.inject.spi.DeploymentException: Exception List with 1 exceptions:",
+        "template": "Lifecycle strategy <*> vetoed initializing CamelContext (<*>) due to: <*>"
+    }
+]

@@ -1,32 +1,194 @@
 [
-  {
-    "content": "Deleting errant node 15 as if -NONE-: 1.3 ISO-2022-KR",
-    "template": "Deleting errant node <*> as if -NONE-: <*> <*>",
-    "Postive_Example": "Deleting errant node 9 as if -NONE-: 0.4 Big5",
-    "Negative_Example": "Adjusting end char offset from 128 to 0"
-  },
-  {
-    "content": "Illegal access java.lang.reflect.InvocationTargetException: Method threw 'java.lang.IllegalArgumentException' exception.",
-    "template": "Illegal access <*>",
-    "Postive_Example": "Illegal access android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=content://com.example.provider/images/1 }",
-    "Negative_Example": "Initialized tokenizer factory: org.apache.lucene.analysis.core.WhitespaceTokenizerFactory"
-  },
-  {
-    "content": "Caught exception creating Arabic normalizer map: java.io.FileNotFoundException: arabic.map (No such file or directory)",
-    "template": "Caught exception creating Arabic normalizer map: <*>",
-    "Postive_Example": "Caught exception creating Arabic normalizer map: java.lang.Error",
-    "Negative_Example": "Parse exception while reading archive.zip"
-  },
-  {
-    "content": "Couldn't build object from line: animal=cat breed=Persian name=Fluffy",
-    "template": "Couldn't build object from line: <*>",
-    "Postive_Example": "Couldn't build object from line: food=pizza size=large toppings=cheese, pepperoni, mushrooms",
-    "Negative_Example": "Reading in trees from /tmp/testTreebankPath"
-  },
-  {
-    "content": "Gold entity list does not contain words \"Microsoft\" for label \"ORGANIZATION\". *****Assuming them as negative.******",
-    "template": "Gold entity list does not contain words <*> for label <*>. *****Assuming them as negative.******",
-    "Postive_Example": "Gold entity list does not contain words \"3.14\" for label \"NUMBER\". *****Assuming them as negative.******",
-    "Negative_Example": "No extractions in: \"stdin\".equals(\"slide.pptx\") ? document : \"slide.pptx\""
-  }
+    {
+        "content": "Error setting up NER_COMBINER_NAME! Not applying NER tags!",
+        "template": "Error setting up <*>! Not applying NER tags!",
+        "Postive_Example": "Error setting up NER_COMBINER_NAME! Not applying NER tags!",
+        "Negative_Example": "Adjusting begin char offset from 78 to 0"
+    },
+    {
+        "content": "preTokenized option set: Annotators list starts with tokenize,ssplit, no change needed.",
+        "template": "preTokenized option set: Annotators list starts with tokenize,ssplit, no change needed.",
+        "Postive_Example": "preTokenized option set: Annotators list starts with tokenize,ssplit, no change needed.",
+        "Negative_Example": "preTokenized option set: Adding tokenize,ssplit to beginning."
+    },
+    {
+        "content": "PennTreeReader: warning: incomplete tree (extra left parentheses in input): (((WHNP-1 (-NONE- 0)) SINV|<MD Will> NP-SBJ|<PRP she> VP|<VB come>",
+        "template": "PennTreeReader: warning: incomplete tree (extra left parentheses in input): <*>",
+        "Postive_Example": "PennTreeReader: warning: incomplete tree (extra left parentheses in input): ((SINV-TPC-1 (-NONE- *T*-2) , ,) ((S (-NONE- *T*-1)) VP|<VBG Having> NP|<DT a> NN|<breakfast>))",
+        "Negative_Example": "PennTreeReader: warning: file has extra non-matching right parenthesis [ignored]"
+    },
+    {
+        "content": "CONLL MENTION GOLD FILE: /data/conll-2012/v4/data/dev/data/english/annotations/bn/cnn/03/cnn_0301.gold_conll",
+        "template": "CONLL MENTION GOLD FILE: <*>",
+        "Postive_Example": "CONLL MENTION GOLD FILE: /data/conll-2012/v4/data/train/data/english/annotations/mz/sinorama/11/ectb_1105.gold_conll",
+        "Negative_Example": "CONLL MENTION PREDICTED FILE: /data/user3/conll2012/mention_pred_3.json"
+    },
+    {
+        "content": "Sentence: The/cat/NP/NNS/SBJ/VP/VBD/quickly/RB/ADV/VP/VBD/jumped/over/the/fence/NP/NN/OBJ",
+        "template": "Sentence: <*>",
+        "Postive_Example": "Sentence: It/PRP/NP/SBJ/VP/VBZ/a/beautiful/day/NP/JJ/PRED",
+        "Negative_Example": "Annotating dataset with named entity recognition"
+    },
+    {
+        "content": "Relation extraction results AFTER consistency checks for partition #5 using printer org.apache.log4j.JMSAppender : Success",
+        "template": "Relation extraction results AFTER consistency checks for partition <*> using printer <*> : <*>",
+        "Postive_Example": "Relation extraction results AFTER consistency checks for partition #2 using printer org.apache.log4j.DailyRollingFileAppender : Warning: File size exceeded",
+        "Negative_Example": "Relation extraction results for partition #3 using printer com.example.Printer@4d5e6f : Success"
+    },
+    {
+        "content": "Using relation extraction post processor: edu.stanford.nlp.ie.machinereading.MachineReadingProperties$NERRelationExtractorPostProcessor",
+        "template": "Using relation extraction post processor: <*>",
+        "Postive_Example": "Using relation extraction post processor: edu.stanford.nlp.ie.machinereading.MachineReadingProperties$EntityMentionRelationExtractorPostProcessor",
+        "Negative_Example": "Entity extraction results for partition #2 using printer com.example.Printer@7g8h9i : Success"
+    },
+    {
+        "content": "Loading sieve: ExactStringMatch from HybridCorefProperties.getPathModel(props, ExactStringMatch) ...",
+        "template": "Loading sieve: <*> from <*> ...",
+        "Postive_Example": "Loading sieve: RoleAppositive from HybridCorefProperties.getPathModel(props, RoleAppositive) ...",
+        "Negative_Example": "Removing already identified patterns removeIdentifiedPatterns in favor of pat_14"
+    },
+    {
+        "content": "For sentence s.get(CoreAnnotations.TextAnnotation.class) = \"She sells seashells by the seashore.\"",
+        "template": "For sentence <*>",
+        "Postive_Example": "For sentence s.get(CoreAnnotations.TextAnnotation.class) = \"I have a dream that one day this nation will rise up and live out the true meaning of its creed.\"",
+        "Negative_Example": "org.springframework.context.ApplicationContext: Factored parse succeeded!"
+    },
+    {
+        "content": "Parsing of sentence failed, possibly because of out of memory. Will ignore and continue: \"I think therefore I am.\"",
+        "template": "Parsing of sentence failed, possibly because of out of memory. Will ignore and continue: <*>",
+        "Postive_Example": "Parsing of sentence failed, possibly because of out of memory. Will ignore and continue: \"How much wood would a woodchuck chuck if a woodchuck could chuck wood?\"",
+        "Negative_Example": "Parsing of sentence ran out of memory (length=45). Will ignore and try to continue."
+    },
+    {
+        "content": "Removing 10 patterns that do not meet minPosPhraseSupportForPat requirement of >= 0.7",
+        "template": "Removing <*> patterns that do not meet minPosPhraseSupportForPat requirement of >= <*>",
+        "Postive_Example": "Removing 6 patterns that do not meet minPosPhraseSupportForPat requirement of >= 1.1",
+        "Negative_Example": "Removing dep killed in poss/prep (conj) collapse: td-13"
+    },
+    {
+        "content": "usage: RadicalMap [-rebuild <dict_file>] [-infile <file>] [-encoding <encoding>] [char]+",
+        "template": "usage: RadicalMap [-rebuild <dict_file>] [-infile <file>] [-encoding <encoding>] [char]+",
+        "Postive_Example": "usage: RadicalMap [-rebuild <dict_file>] [-infile <file>] [-encoding <encoding>] [char]+",
+        "Negative_Example": "usage: RadicalMap [-rebuild dictFile] [-infile file] [-encoding encoding] char+"
+    },
+    {
+        "content": "Loading entity extraction model from HuggingFace_Transformers_model.pth ...",
+        "template": "Loading entity extraction model from <*> ...",
+        "Postive_Example": "Loading entity extraction model from NER_BERT.pt ...",
+        "Negative_Example": "Loading KBP classifier from: model/kbp-deberta-v2-xlarge.bin"
+    },
+    {
+        "content": "CleanXML: ending tokens: [word=\"!\", tag=\".\", lemma=\"!\", ner=\"O\", speaker=\"PER0\", beginOffset=\"13\", endOffset=\"14\"]",
+        "template": "CleanXML: ending tokens: <*>",
+        "Postive_Example": "CleanXML: ending tokens: [word=isn't, tag=VBZ+RB+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION+PUNCTUATION",
+        "Negative_Example": "Sentence 11 quoted= \"Frankly, my dear, I don't give a damn.\""
+    },
+    {
+        "content": "DBG Done labeling provided sents in 0.34 seconds. Total # of tokens labeled: 456",
+        "template": "<*> Done labeling provided sents in <*>. Total # of tokens labeled: <*>",
+        "Postive_Example": "DBG Done labeling provided sents in 0.27 seconds. Total # of tokens labeled: 389",
+        "Negative_Example": "Number of iterations of trees: 150"
+    },
+    {
+        "content": "Replacing old annotator \"Sentiment\" with signature [TextBlob, 0.16.0] with new annotator with signature [HuggingFace Transformers, 4.12]",
+        "template": "Replacing old annotator \"<*>\" with signature [<*>] with new annotator with signature [<*>]",
+        "Postive_Example": "Replacing old annotator \"NER\" with signature [StanfordCoreNLP, 3.9.2] with new annotator with signature [SpaCy, 3.1.3]",
+        "Negative_Example": "Cached annotator will never GC -- this can cause OOM exceptions!"
+    },
+    {
+        "content": "WARNING: QuantifiableEntityNormalizingAnnotator does not work well with collapse=true",
+        "template": "WARNING: QuantifiableEntityNormalizingAnnotator does not work well with collapse=true",
+        "Postive_Example": "WARNING: QuantifiableEntityNormalizingAnnotator does not work well with collapse=true",
+        "Negative_Example": "ABORTING: Input file and output is the same - image.jpg"
+    },
+    {
+        "content": "Created index with size 30. Don't worry if it's zero and you are using batch process sents.",
+        "template": "Created index with size <*>. Don't worry if it's zero and you are using batch process sents.",
+        "Postive_Example": "Created index with size 1000. Don't worry if it's zero and you are using batch process sents.",
+        "Negative_Example": "Training linear classifier with 150 features and 6 labels"
+    },
+    {
+        "content": "WARNING: buildGraphsProperty set to true, but org.apache.commons.cli.TLPParams does not support dependencies",
+        "template": "WARNING: <*> set to true, but <*> does not support dependencies",
+        "Postive_Example": "WARNING: buildGraphsProperty set to true, but this.parser.getTLPParams().getClass() does not support dependencies",
+        "Negative_Example": "Id: 222 Quote: \"Morbi bibendum urna ac elit aliquam, in euismod orci ultricies."
+    },
+    {
+        "content": "ChineseUtils.normalize warning: unmatched high surrogate character U+ D80D in \"\\uD80D\\uDC00\\uD80D\\uDC01\\uD80D\\uDC02\\uD80D\"",
+        "template": "ChineseUtils.normalize warning: unmatched high surrogate character U+ <*> in <*>",
+        "Postive_Example": "ChineseUtils.normalize warning: unmatched high surrogate character U+ D800 in \"Hello \\uD800 World\"",
+        "Negative_Example": "Serializing parsed sentences to C:\\Users\\user2\\Documents\\sentences.ser ..."
+    },
+    {
+        "content": "Datum Extraction failed in Sieve.java while processing document: 4004 part: 4",
+        "template": "Datum Extraction failed in Sieve.java while processing document: <*> part: <*>",
+        "Postive_Example": "Datum Extraction failed in Sieve.java while processing document: 1111 part: 11",
+        "Negative_Example": "Finished processing 140 trees"
+    },
+    {
+        "content": "CustomerMapper : Unable to instantiate mapper type com.example.model.Customer",
+        "template": "<*> : Unable to instantiate mapper type <*>",
+        "Postive_Example": "PermissionMapper : Unable to instantiate mapper type com.example.model.Permission",
+        "Negative_Example": "Loading entity extraction model from MITIE_NER_model.dat ..."
+    },
+    {
+        "content": "Caught exception creating Arabic normalizer map: java.nio.charset.MalformedInputException: Input length = 1",
+        "template": "Caught exception creating Arabic normalizer map: <*>",
+        "Postive_Example": "Caught exception creating Arabic normalizer map: java.lang.ClassNotFoundException: org.apache.lucene.analysis.ar.ArabicNormalizer",
+        "Negative_Example": "Removing 17 patterns that do not meet minPosPhraseSupportForPat requirement of >= -0.1"
+    },
+    {
+        "content": "Illegal access java.lang.IllegalAccessException: Class com.example.Main can not access a member of class com.example.Private with modifiers \"private\"",
+        "template": "Illegal access <*>",
+        "Postive_Example": "Illegal access android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=content://com.example.provider/images/1 }",
+        "Negative_Example": "Initializing JollyDayHoliday for SUTime from RESOURCE com/example/sutime/Holidays_example.xml as example.holidays"
+    },
+    {
+        "content": "Long Sentence: Four score and seven years ago our fathers brought forth on this continent a new nation.",
+        "template": "Long Sentence: <*>",
+        "Postive_Example": "Long Sentence: I have a dream that one day this nation will rise up and live out the true meaning of its creed.",
+        "Negative_Example": "-nofilter: Rules for the parser will not be filtered based on the training treebank."
+    },
+    {
+        "content": "Empty top speakers list for: \"The only thing we have to fear is fear itself\" [no candidate top speakers found \u2013 just ignore!",
+        "template": "Empty top speakers list for: <*> [no candidate top speakers found \u2013 just ignore!",
+        "Postive_Example": "Empty top speakers list for: \"The journey of a thousand miles begins with a single step\" [no candidate top speakers found \u2013 just ignore!",
+        "Negative_Example": "Processing text \"May the force be with you\" with dateString = 2023-10-15"
+    },
+    {
+        "content": "Failed to use the given parser to reparse sentence \"He ran as fast as he could.\"",
+        "template": "Failed to use the given parser to reparse sentence \"<*>\"",
+        "Postive_Example": "Failed to use the given parser to reparse sentence \"They are going on a vacation next week.\"",
+        "Negative_Example": "Depth first search from start node"
+    },
+    {
+        "content": "debug-preprocessorWARNING: gold mentions with the same offsets: ip=10.0.3.13 mentions=g.mentionID=27,existingMentions=28, g.spanToString()=Facebook",
+        "template": "debug-preprocessorWARNING: gold mentions with the same offsets: <*> mentions=<*>,<*>, <*>",
+        "Postive_Example": "debug-preprocessorWARNING: gold mentions with the same offsets: ip=192.168.0.1 mentions=g.mentionID=1,existingMentions=2, g.spanToString()=John Smith",
+        "Negative_Example": "PennTreeReader: warning: file has extra non-matching right parenthesis [ignored]"
+    },
+    {
+        "content": "CONLL MENTION PREDICTED FILE: /data/user10/conll2012/mention_pred_10.parquet",
+        "template": "CONLL MENTION PREDICTED FILE: <*>",
+        "Postive_Example": "CONLL MENTION PREDICTED FILE: /mnt/c/Users/user2/Documents/conll2012/mention_pred_2.csv",
+        "Negative_Example": "CONLL MENTION EVAL FILE: /data/user1/eval/conll-2012-test.v4_auto_conll"
+    },
+    {
+        "content": "Relation extraction results for partition #9 using printer com.example.Printer@4d5e6f : Error: Printer jammed",
+        "template": "Relation extraction results <*> using printer <*> : <*>",
+        "Postive_Example": "Relation extraction results for partition #0 using printer com.example.Printer@1a2b3c : Success",
+        "Negative_Example": "Entity extraction results for partition #1 using printer com.example.Printer@4d5e6f : Error: Printer not found"
+    },
+    {
+        "content": "Tagging of sentence ran out of memory. Will ignore and continue: To be or not to be, that is the question.",
+        "template": "Tagging of sentence ran out of memory. Will ignore and continue: <*>",
+        "Postive_Example": "Tagging of sentence ran out of memory. Will ignore and continue: I have a dream that one day this nation will rise up and live out the true meaning of its creed.",
+        "Negative_Example": "shuffled 15 sentences and selecting 4 sentences per thread"
+    },
+    {
+        "content": "ConstantsAndVariables.extremedebug For pattern with index 5 extracted the following sentences from the index 23",
+        "template": "<*> For pattern with index <*> extracted the following sentences from the index <*>",
+        "Postive_Example": "ConstantsAndVariables.extremedebug For pattern with index 12 extracted the following sentences from the index 7",
+        "Negative_Example": "Extracted the following entities:"
+    }
 ]

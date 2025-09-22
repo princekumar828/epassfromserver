@@ -1,32 +1,194 @@
 [
-  {
-    "content": "Executor service did not terminate in the specified time 2 sec. Exception: java.lang.StringIndexOutOfBoundsException",
-    "template": "Executor service did not terminate in the specified time <*> sec. Exception: <*>",
-    "Postive_Example": "Executor service did not terminate in the specified time 1 sec. Exception: java.lang.StackOverflowError",
-    "Negative_Example": "Failed to cancel metastore delegation token for jobId=1122 java.lang.IllegalArgumentException"
-  },
-  {
-    "content": "Setting permission for path dest /media/cdrom/file3.txt from source /home/user6/file3.txt owner user6 : cdrom : r-xr-xr-x",
-    "template": "Setting permission for path dest <*> from source <*> owner <*> : <*> : <*>",
-    "Postive_Example": "Setting permission for path dest /lib/modules/5.10.0-9-amd64/kernel/drivers/net/ethernet/intel/e1000e/e1000e.ko from source /usr/src/linux-headers-5.10.0-9-amd64/drivers/net/ethernet/intel/e1000e/e1000e.ko owner root : root : rwxr-xr-x",
-    "Negative_Example": "Handling move session event: moveSession_6 , Convert to Delayed Move: true"
-  },
-  {
-    "content": "Column 'comments' is NULL. Will write NULL instead. Only 1 such message per type/column is emitted.",
-    "template": "<*> Will write NULL instead. Only 1 such message per type/column is emitted.",
-    "Postive_Example": "Column 'marital_status' is NULL. Will write NULL instead. Only 1 such message per type/column is emitted.",
-    "Negative_Example": "Unsupported type: blob encountered in metadata optimizer for column : image"
-  },
-  {
-    "content": "Checking tokens, count: 2",
-    "template": "Checking tokens, count: <*>",
-    "Postive_Example": "Checking tokens, count: 10",
-    "Negative_Example": "Evicting success at 20:10:10"
-  },
-  {
-    "content": "Exception getting db version:junit.framework.AssertionFailedError: Expected 1.0 but was 0.9",
-    "template": "Exception getting db version:<*>",
-    "Postive_Example": "Exception getting db version:javax.persistence.PersistenceException: No Persistence provider for EntityManager named test",
-    "Negative_Example": "Generating diff failed: IOException: Failed to read from input stream"
-  }
+    {
+        "content": "tree: (SELECT (COUNT (*) AS TOTAL) FROM (ORDER))",
+        "template": "tree: <*>",
+        "Postive_Example": "tree: (SELECT (*) FROM (FLIGHT) WHERE (AND (= ORIGIN 'LONDON') (= DESTINATION 'PARIS')))",
+        "Negative_Example": "Added default value from metastore: 0.5"
+    },
+    {
+        "content": "Generate splits schema evolution property false reader schema {\"type:\"record\", \"name:\"Movie\", \"fields\":[{\"name:\"title\", \"type:\"string\"}, {\"name:\"genre\", \"type:\"string\"}, {\"name:\"rating\", \"type:\"double\"}]} ACID scan property true",
+        "template": "Generate splits schema evolution property <*> reader schema <*> ACID scan property <*>",
+        "Postive_Example": "Generate splits schema evolution property true reader schema NULL ACID scan property false",
+        "Negative_Example": "Caught exception java.net.SocketTimeoutException with message <<Read timed out>>, swallowing as there is nothing we can do with it."
+    },
+    {
+        "content": "Error closing Connection: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms",
+        "template": "Error closing Connection: <*>",
+        "Postive_Example": "Error closing Connection: org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Data source is closed",
+        "Negative_Example": "Failed to perform rollback on connection java.sql.SQLTimeoutException: Timeout after 10000ms of waiting for a connection."
+    },
+    {
+        "content": "Encountered error while executing updateMDatabaseURI - commit of JDO transaction failed. Failed to update FSRoot locations in LOCATION_URI field in DBS table.",
+        "template": "Encountered error while executing updateMDatabaseURI - commit of JDO transaction failed. Failed to update FSRoot locations in LOCATION_URI field in DBS table.",
+        "Postive_Example": "Encountered error while executing updateMDatabaseURI - commit of JDO transaction failed. Failed to update FSRoot locations in LOCATION_URI field in DBS table.",
+        "Negative_Example": "RuntimeException while dumping atlas metadata: java.lang.NumberFormatException: For input string \"abc\""
+    },
+    {
+        "content": "Error deregistering HiveServer2 instances for version: 2.7.0 from ZooKeeper org.apache.zookeeper.KeeperException$AuthFailedException",
+        "template": "Error deregistering HiveServer2 instances for version: <*> from ZooKeeper <*>",
+        "Postive_Example": "Error deregistering HiveServer2 instances for version: 3.0.0 from ZooKeeper java.io.IOException",
+        "Negative_Example": "Failed to restart an old session; ignoring UnsupportedOperationException"
+    },
+    {
+        "content": "After logical optimization [TableScan(table=[[inventory, products]]), JoinRel(condition=[=($1, $5)], joinType=[inner]), ProjectRel(exprs=[[$0, $2, $4, $6]])]",
+        "template": "After logical optimization <*>",
+        "Postive_Example": "After logical optimization [TableScan(table=[[sales, customers]]), SortRel(sort0=[$1], dir0=[ASC]), LimitRel(offset=[10], fetch=[20])]",
+        "Negative_Example": "GetAvailableResources: numInstancesFound= 13 , totalMem= 52 GB , totalVcores= 7"
+    },
+    {
+        "content": "[external.table.purge] Executing SQL:insert into table28 select * from openquery(linked_server, 'select * from remote_table')",
+        "template": "[external.table.purge] Executing SQL:<*>",
+        "Postive_Example": "[external.table.purge] Executing SQL:insert high_priority into table20 (id, product, price) values (1001, 'Laptop', 999.99), (1002, 'Phone', 499.99), (1003, 'Tablet', 299.99)",
+        "Negative_Example": "Completed renaming table diff progress file to table diff complete file."
+    },
+    {
+        "content": "Selected HiveServer2 instance with uri: jdbc:hive2://hive-cluster-1:10004/clusterdb;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2",
+        "template": "Selected HiveServer2 instance with uri: <*>",
+        "Postive_Example": "Selected HiveServer2 instance with uri: jdbc:hive2://192.168.1.10:10001/testdb",
+        "Negative_Example": "Could not determine whether jdbc connection is closed or not to jdbc:hsqldb:mem:myDb InvalidPropertiesFormatException"
+    },
+    {
+        "content": "Msck failed. org.apache.hadoop.hive.metastore.RetryingMetaStoreClient$RetryingInvocationHandler.invoke(RetryingMetaStoreClient.java:212) ~[hive-exec-3.1.2.jar:3.1.2]",
+        "template": "Msck failed. <*>",
+        "Postive_Example": "Msck failed. org.apache.hadoop.hive.metastore.api.InvalidOperationException: Partition already exists: Partition(values:[2020, 10, 31], dbName:test, tableName:test_table, createTime:1604160000, lastAccessTime:0, sd:StorageDescriptor(...), parameters:{})",
+        "Negative_Example": "Retriable exception while invoking method, retrying. 3 attempts left java.io.IOException"
+    },
+    {
+        "content": "Msck failed. org.apache.hadoop.security.AccessControlException: Permission denied: user=hive, access=WRITE, inode=\"/user/hive/warehouse/test.db/test_table\":hdfs:hdfs:drwxr-xr-x",
+        "template": "Msck failed. <*>",
+        "Postive_Example": "Msck failed. org.apache.hadoop.hive.metastore.api.InvalidOperationException: Partition already exists: Partition(values:[2020, 10, 31], dbName:test, tableName:test_table, createTime:1604160000, lastAccessTime:0, sd:StorageDescriptor(...), parameters:{})",
+        "Negative_Example": "Incompatible ORC file merge! Row index stride mismatch for /user/hive/warehouse/test.db/table6/part-00005"
+    },
+    {
+        "content": "Got SQLException: Packet for query is too large (4739923 > 1048576). You can change this value on the server by setting the max_allowed_packet' variable.",
+        "template": "Got SQLException: <*>",
+        "Postive_Example": "Got SQLException: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM users' at line 1.",
+        "Negative_Example": "Exception while trying to create or update WMMapping java.lang.OutOfMemoryError: Java heap space"
+    },
+    {
+        "content": "Default storage handler class detected in config. Using storage handler class if exists: ' org.apache.hadoop.hive.dynamodb.DynamoDBStorageHandler '",
+        "template": "Default storage handler class detected in config. Using storage handler class if exists: ' <*> '",
+        "Postive_Example": "Default storage handler class detected in config. Using storage handler class if exists: ' com.amazonaws.emr.hive.serde.S3StorageHandler '",
+        "Negative_Example": "Starting delayed move timeout validator with interval: 6 s; delayed move timeout is set to : 18 s"
+    },
+    {
+        "content": "Invalid app name. This must be setup via config or passed in as a parameter. This tool works with clusters deployed by YARN Service",
+        "template": "Invalid app name. This must be setup via config or passed in as a parameter. This tool works with clusters deployed by YARN Service",
+        "Postive_Example": "Invalid app name. This must be setup via config or passed in as a parameter. This tool works with clusters deployed by YARN Service",
+        "Negative_Example": "Failed to execute command in global .hiverc file. org.apache.hive.service.cli.HiveSQLException"
+    },
+    {
+        "content": "Configured refresh interval: 6 s. Watch timeout: 12 s. Attempts remaining: 2 . Watch mode: passive . Running nodes threshold: 1 .",
+        "template": "Configured refresh interval: <*> s. Watch timeout: <*> s. Attempts remaining: <*> . Watch mode: <*> . Running nodes threshold: <*> .",
+        "Postive_Example": "Configured refresh interval: 13 s. Watch timeout: 26 s. Attempts remaining: 11 . Watch mode: active . Running nodes threshold: 11 .",
+        "Negative_Example": "Failed to inject operation dumpHeap. No class def found error."
+    },
+    {
+        "content": "Failed to send taskKilled message for task attempt_20211023_041134_00013_0013_m_000012_c. Will re-run after it times out",
+        "template": "Failed to send taskKilled message for task <*>. Will re-run after it times out",
+        "Postive_Example": "Failed to send taskKilled message for task attempt_20211023_041123_00002_0002_r_000001_1. Will re-run after it times out",
+        "Negative_Example": "Failed to close connection. java.util.concurrent.TimeoutException: Connection timed out"
+    },
+    {
+        "content": "List bucketing pruner is either null or in unknown state so that it uses full partition scan : [\"/user/hive/warehouse/test.db/part4\"]",
+        "template": "List bucketing pruner is either null or in unknown state so that it uses full partition scan : <*>",
+        "Postive_Example": "List bucketing pruner is either null or in unknown state so that it uses full partition scan : [\"/user/hive/warehouse/prod.db/part1\"]",
+        "Negative_Example": "Ignoring unknown llap server parameter: [hive.llap.daemon.web.port]"
+    },
+    {
+        "content": "Could not create PersistenceManagerFactory using connection pool properties, will fall back to default configuration (Error: Invalid URL)",
+        "template": "Could not create PersistenceManagerFactory using connection pool properties, will fall back <*>",
+        "Postive_Example": "Could not create PersistenceManagerFactory using connection pool properties, will fall back to JPA (Error: No persistence unit defined)",
+        "Negative_Example": "Creating Hikari connection pool for the MetaStore, maxPoolSize: 20 , name: spark"
+    },
+    {
+        "content": "analyzeCreateTable failed to initialize CTAS after CBO; new ast is (TOK_CREATETABLE (TOK_TABNAME db19 table19) TOK_LIKETABLE (TOK_TABNAME db20 table20) TOK_TABLETEMPORARY)",
+        "template": "analyzeCreateTable failed to initialize CTAS after CBO; new ast is <*>",
+        "Postive_Example": "analyzeCreateTable failed to initialize CTAS after CBO; new ast is (TOK_CREATETABLE (TOK_TABNAME db6 table6) TOK_TABLEFILEFORMAT (TOK_FILEFORMATSEQUENCEFILE) TOK_TABLELOCATION 'hdfs://path/to/table')",
+        "Negative_Example": "Session not actually closed because configuration HIVE_SERVER2_CLOSE_SESSION_ON_DISCONNECT.VARNAME is set to false"
+    },
+    {
+        "content": "Caught exception java.lang.OutOfMemoryError with message <<Failed to allocate a 16 byte allocation with 0 free bytes and 0B until OOM>>, swallowing as there is nothing we can do with it.",
+        "template": "Caught exception <*> with message <<<*>>>, swallowing as there is nothing we can do with it.",
+        "Postive_Example": "Caught exception android.database.sqlite.SQLiteException with message <<no such table: users>>, swallowing as there is nothing we can do with it.",
+        "Negative_Example": "We expect 4194304 bytes for the record content but read 3145728 bytes and reach the End of File."
+    },
+    {
+        "content": "Failed to determine schema version from Hive Metastore DB. org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused",
+        "template": "Failed to determine schema version from Hive Metastore DB. <*>",
+        "Postive_Example": "Failed to determine schema version from Hive Metastore DB. java.lang.IllegalArgumentException: Invalid URI for configuration javax.jdo.option.ConnectionURL : jdbc:hive2://localhost/metastore",
+        "Negative_Example": "Failed to create curatorFramework object: org.apache.zookeeper.KeeperException$ConnectionLossException"
+    },
+    {
+        "content": "HiveStorageHandlers can't be reliably instantiated on the client-side. Attempting to derive Input/OutputFormat settings from StorageHandler, on best effort:",
+        "template": "HiveStorageHandlers can't be reliably instantiated on the client-side. Attempting to derive Input/OutputFormat settings from StorageHandler, on best effort:",
+        "Postive_Example": "HiveStorageHandlers can't be reliably instantiated on the client-side. Attempting to derive Input/OutputFormat settings from StorageHandler, on best effort:",
+        "Negative_Example": "CachedStore: updated cached aggregate partition col stats objects for catalog: music , database: songs , table: artists"
+    },
+    {
+        "content": "Could not determine ContainerId for task: task_6_6 . Could have hit a race condition. Ignoring. The query may hang since this \"unknown\" container is now taking up a slot permanently",
+        "template": "Could not determine ContainerId for task: <*> . Could have hit a race condition. Ignoring. The query may hang since this \"unknown\" container is now taking up a slot permanently",
+        "Postive_Example": "Could not determine ContainerId for task: task_10_10 . Could have hit a race condition. Ignoring. The query may hang since this \"unknown\" container is now taking up a slot permanently",
+        "Negative_Example": "Error while trying to determine if immutable table partition orders has any data : orders : /data/orders"
+    },
+    {
+        "content": "The table departments is converted to ACID table. It will be replicated with bootstrap load as hive.repl.bootstrap.acid.tables is set to true.",
+        "template": "The table <*> is converted to ACID table. It will be replicated with bootstrap load as hive.repl.bootstrap.acid.tables is set to true.",
+        "Postive_Example": "The table inventory is converted to ACID table. It will be replicated with bootstrap load as hive.repl.bootstrap.acid.tables is set to true.",
+        "Negative_Example": "Read all columns of a RCFile with 5 random string columns and 1000 rows cost 12 milliseconds."
+    },
+    {
+        "content": "Caught exception while trying to execute query JOIN customers ON orders.customer_id = customers.id",
+        "template": "Caught exception while trying to execute query <*>",
+        "Postive_Example": "Caught exception while trying to execute query SUBQUERY SELECT * FROM (SELECT * FROM products WHERE category = 'Electronics')",
+        "Negative_Example": "Runtime Exception during Ranger Deny policy creation. StackOverflowError"
+    },
+    {
+        "content": "Caught exception dropping schema com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'test'",
+        "template": "Caught exception dropping schema <*>",
+        "Postive_Example": "Caught exception dropping schema com.mongodb.MongoCommandException: Command failed with error 13 (Unauthorized): 'not authorized on admin to execute command { dropDatabase: 1, lsid: { id: UUID(\"f0c9a8b0-7c4f-4e5f-9a9c-3d8c2e6d8a9b\") }, $db: \"admin\" }' on server localhost:27017. The full response is {\"ok\": 0.0, \"errmsg\": \"not authorized on admin to execute command { dropDatabase: 1, lsid: { id: UUID(\\\"f0c9a8b0-7c4f-4e5f-9a9c-3d8c2e6d8a9b\\\") }, $db: \\\"admin\\\" }\", \"code\": 13, \"codeName\": \"Unauthorized\"}",
+        "Negative_Example": "RuntimeException while dumping atlas metadata: java.lang.ArithmeticException: / by zero"
+    },
+    {
+        "content": "Error while table creation: java.lang.NullPointerException: Cannot invoke \"java.sql.Connection.createStatement()\" because \"conn\" is null",
+        "template": "Error while table creation: <*>",
+        "Postive_Example": "Error while table creation: org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [create table students (id int primary key, name varchar(255), age int)]; nested exception is java.sql.SQLSyntaxErrorException: ORA-00904: \"AGE\": invalid identifier",
+        "Negative_Example": "Error while trying to determine if immutable table store has any data : store : /data/store"
+    },
+    {
+        "content": "Error adding this HiveServer2 instance to ZooKeeper: org.apache.zookeeper.KeeperException$NotReadOnlyException: KeeperErrorCode = NotReadOnly for /hiveserver2",
+        "template": "Error adding this HiveServer2 instance to ZooKeeper: <*>",
+        "Postive_Example": "Error adding this HiveServer2 instance to ZooKeeper: java.lang.IllegalArgumentException: Invalid path string \"/hiveserver2\" caused by empty node name specified @1",
+        "Negative_Example": "Got SQLException: The connection was closed unexpectedly by the server."
+    },
+    {
+        "content": "Session not actually closed because configuration confvars.hive.server2.close.session.on.disconnect.varname is set to false",
+        "template": "Session not actually closed because configuration <*> is set to false",
+        "Postive_Example": "Session not actually closed because configuration HIVE_SERVER2_CLOSE_SESSION_ON_DISCONNECT is set to false",
+        "Negative_Example": "Signalling thread was interrupted: java.net.SocketException: Connection reset"
+    },
+    {
+        "content": "Exceeds maximum retries with errors: java.util.zip.ZipException: invalid entry size (expected 123456 but got 789012 bytes)",
+        "template": "Exceeds maximum retries with errors: <*>",
+        "Postive_Example": "Exceeds maximum retries with errors: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 15; The element type \"book\" must be terminated by the matching end-tag \"</book>\".",
+        "Negative_Example": "Failed to delete an old path; ignoring java.lang.SecurityException: Permission denied for /opt/bin/qux.sh"
+    },
+    {
+        "content": "Unable to instantiate MockLocationProvider class. Will try no-arg constructor invocation.. java.lang.IllegalAccessException",
+        "template": "Unable to instantiate <*> class. Will try no-arg constructor invocation.. <*>",
+        "Postive_Example": "Unable to instantiate LocationListener class. Will try no-arg constructor invocation.. java.lang.ExceptionInInitializerError",
+        "Negative_Example": "Failed to kill the job due to exception: java.util.concurrent.ExecutionException: java.lang.InterruptedException"
+    },
+    {
+        "content": "Found address to be different. Old val : 123 Main Street, San Jose, CA, USA : New Val : 456 Park Avenue, New York, NY, USA",
+        "template": "Found <*> to be different. Old val : <*> : New Val : <*>",
+        "Postive_Example": "Found phone to be different. Old val : +1-408-555-1234 : New Val : +1-212-555-4321",
+        "Negative_Example": "Max retries (4) exhausted. org.xml.sax.SAXParseException: XML parsing error"
+    },
+    {
+        "content": "Samsung vendor does not support isCollectionUsageThresholdSupported() and isUsageThresholdSupported() for tenured memory pool ' ConcurrentMarkSweep Old Gen '.",
+        "template": "<*> vendor does not support isCollectionUsageThresholdSupported() and isUsageThresholdSupported() for tenured memory pool ' <*> '.",
+        "Postive_Example": "Google vendor does not support isCollectionUsageThresholdSupported() and isUsageThresholdSupported() for tenured memory pool ' Epsilon Heap '.",
+        "Negative_Example": "Unable to look up percentile in metastore org.apache.hadoop.hive.metastore.api.MetaException"
+    }
 ]

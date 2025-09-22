@@ -1,32 +1,194 @@
 [
-  {
-    "content": "camel/components/camel-salesforce/test-salesforce-login.properties",
-    "template": "camel/components/camel-salesforce/test-salesforce-login.properties",
-    "Postive_Example": "camel/components/camel-salesforce/test-salesforce-login.properties",
-    "Negative_Example": "changeCommentMessage: comment contains profanity"
-  },
-  {
-    "content": "Stopping the LUMBERJACK server (host=www.lumberjack.net, port=8001).",
-    "template": "Stopping the LUMBERJACK server (host=<*>, port=<*>).",
-    "Postive_Example": "Stopping the LUMBERJACK server (host=server.example.com, port=443).",
-    "Negative_Example": "Creating 9 consumer tasks with poll timeout 300 ms."
-  },
-  {
-    "content": "Skipping OSGi bundle: jar:file:/home/alice/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar!/",
-    "template": "Skipping OSGi bundle: <*>",
-    "Postive_Example": "Skipping OSGi bundle: osgi.identity;osgi.identity=\"org.apache.felix.scr\";type=\"osgi.bundle\";version:Version=\"2.1.24\"",
-    "Negative_Example": "Resolving JGroupsraft handle jgroupsraft://172.16.0.2:4040"
-  },
-  {
-    "content": "Writing Acknowledgement You have requested a password reset for your Gmail account. To reset your password, follow the instructions in the email we sent you.",
-    "template": "Writing Acknowledgement <*>",
-    "Postive_Example": "Writing Acknowledgement You have uploaded a new video on YouTube. Your video title is \"How to make a cake in 5 minutes\". To edit or delete your video, go to your channel page.",
-    "Negative_Example": "Optimising toD via SendDynamicAware component: mailto to use static uri: /static/mail/message.html"
-  },
-  {
-    "content": "Using route builder from the created context: org.apache.camel.impl.DefaultCamelContext@378bf509",
-    "template": "Using route builder from the created context: <*>",
-    "Postive_Example": "Using route builder from the created context: org.apache.camel.impl.DefaultCamelContext@5f150435",
-    "Negative_Example": "StreamCaching is disabled on CamelContext: demo"
-  }
+    {
+        "content": "Using TransformerFactoryClass org.apache.xml.serializer.TransformerIdentityImpl",
+        "template": "Using TransformerFactoryClass <*>",
+        "Postive_Example": "Using TransformerFactoryClass com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder",
+        "Negative_Example": "Using TransactionStrategy configured: BMT"
+    },
+    {
+        "content": "Connecting to hdfs file-system hdfs://hadoop-slave1:54310 (may take a while if connection is not available)",
+        "template": "Connecting to hdfs file-system <*> (may take a while if connection is not available)",
+        "Postive_Example": "Connecting to hdfs file-system hdfs://192.168.1.100:8020 (may take a while if connection is not available)",
+        "Negative_Example": "Limiting maximum messages to poll at 175 files as there were more messages in this poll."
+    },
+    {
+        "content": "Error occurred during shutdown of ExecutorService: eventBus. This exception will be ignored.java.lang.RuntimeException: EventBusException",
+        "template": "Error occurred during shutdown of ExecutorService: <*>. This exception will be ignored.<*>",
+        "Postive_Example": "Error occurred during shutdown of ExecutorService: taskScheduler. This exception will be ignored.java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@7c30a502 rejected from java.util.concurrent.ScheduledThreadPoolExecutor@4f023edb[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 5]",
+        "Negative_Example": "Forcing shutdown of ExecutorService: forkJoinPool"
+    },
+    {
+        "content": "Created new CachedThreadPool for source: database with name: db_pool. -> Success",
+        "template": "Created new CachedThreadPool for source: <*> with name: <*>. -> <*>",
+        "Postive_Example": "Created new CachedThreadPool for source: unknown with name: unknown_pool. -> Error",
+        "Negative_Example": "Created thread[worker-2] -> OK"
+    },
+    {
+        "content": "Breakpoint at node 7 is updating message header on exchangeId: 89c0d1 with header: Authorization and value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+        "template": "Breakpoint at node <*> is updating message header on exchangeId: <*> with header: <*> and value: <*>",
+        "Postive_Example": "Breakpoint at node 9 is updating message header on exchangeId: 12g3h4 with header: Accept and value: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Negative_Example": "Java flight recorder stopped after 95 seconds and saved to file: /var/log/jfr/recording_20211025_075011.jfr"
+    },
+    {
+        "content": "Cannot create/load TransformerFactory due: java.lang.ClassNotFoundException: org.apache.xalan.processor.TransformerFactoryImpl. Will attempt to use JDK fallback TransformerFactory: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl",
+        "template": "Cannot create/load TransformerFactory due: <*>. Will attempt to use JDK fallback TransformerFactory: <*>",
+        "Postive_Example": "Cannot create/load TransformerFactory due: java.lang.UnsupportedOperationException: This TransformerFactory does not support the feature http://javax.xml.XMLConstants/feature/secure-processing. Will attempt to use JDK fallback TransformerFactory: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl",
+        "Negative_Example": "Created TransformerFactory: com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl@1a2b3c4d"
+    },
+    {
+        "content": "StreamCaching is not in use. If using streams then it's recommended to enable stream caching. See more details at https://camel.apache.org/stream-caching.html",
+        "template": "StreamCaching is not in use. If using streams then it's recommended to enable stream caching. See more details at https://camel.apache.org/stream-caching.html",
+        "Postive_Example": "StreamCaching is not in use. If using streams then it's recommended to enable stream caching. See more details at https://camel.apache.org/stream-caching.html",
+        "Negative_Example": "Java flight recorder with profile: continuous will be saved to file on JVM exit: /home/user/jfr/recording_7.jfr"
+    },
+    {
+        "content": "Reply received for unknown messageKey [y1z2a3]. The message will be ignored: {\"type\":\"info\",\"code\":\"202\",\"message\":\"Accepted\"}",
+        "template": "Reply received for unknown messageKey [<*>]. The message will be ignored: <*>",
+        "Postive_Example": "Reply received for unknown messageKey [n7o8p9]. The message will be ignored: {\"type\":\"warning\",\"code\":\"407\",\"message\":\"Proxy Authentication Required\"}",
+        "Negative_Example": "Received Response # 11 : The requested URL was not found on this server."
+    },
+    {
+        "content": "Cannot restore JAAS Configuration. This exception is ignored. javax.security.auth.login.LoginException: No LoginModules configured for DefaultLogin",
+        "template": "Cannot restore JAAS Configuration. This exception is ignored. <*>",
+        "Postive_Example": "Cannot restore JAAS Configuration. This exception is ignored. java.lang.NoClassDefFoundError: Could not initialize class com.example.auth.JAASConfig",
+        "Negative_Example": "Error notifying event share . This exception will be ignored. java.util.ConcurrentModificationException"
+    },
+    {
+        "content": "Cannot load existing JAAS configuration: java.lang.IllegalArgumentException: Configuration Error: Line 12: expected [option key]",
+        "template": "Cannot load existing JAAS configuration: <*>",
+        "Postive_Example": "Cannot load existing JAAS configuration: java.security.AccessControlException: access denied (\"javax.security.auth.AuthPermission\" \"createLoginContext.DefaultLogin\")",
+        "Negative_Example": "Invoking operation validateInput with [name, address, phone]"
+    },
+    {
+        "content": "executeSyncReport with metadata: reportResults=[{\"id\" :19, name: Risk Report, status: PENDING, duration: 0.0}, {\"id\" :20, name: Compliance Report, status SUCCESS, duration :11.4}]",
+        "template": "executeSyncReport with metadata: <*>",
+        "Postive_Example": "executeSyncReport with metadata: reportResults=[{\"id\": 1, \"name\": \"Sales Report\", \"status\": \"SUCCESS\", \"duration\": 12.3}, {\"id\": 2, \"name\": \"Inventory Report\", \"status\": \"FAILURE\", \"duration\": 8.7}]",
+        "Negative_Example": "Cannot load existing JAAS configuration: java.lang.SecurityException: Unable to locate a login configuration"
+    },
+    {
+        "content": "Lifecycle strategy resume failed on CamelContext (myApp) due to: org.apache.camel.ResolveEndpointFailedException: Failed to resolve endpoint. This exception will be ignored",
+        "template": "Lifecycle strategy <*> failed on CamelContext (<*>) due to: <*>. This exception will be ignored",
+        "Postive_Example": "Lifecycle strategy shutdown failed on CamelContext (test) due to: java.io.IOException: Stream closed. This exception will be ignored",
+        "Negative_Example": "Cannot restore JAAS Configuration. This exception is ignored. java.lang.SecurityException: Unable to locate a login configuration"
+    },
+    {
+        "content": "Using 5 instances of same component class: android.widget.TextView with names: textView1, textView2, textView3, textView4, textView5",
+        "template": "Using <*> instances of same component class: <*> with names: <*>",
+        "Postive_Example": "Using 6 instances of same component class: java.util.concurrent.ExecutorService with names: executorService1, executorService2, executorService3, executorService4, executorService5, executorService6",
+        "Negative_Example": "Using batch consumer completion, so setting batch size to: 450"
+    },
+    {
+        "content": "Error loading Saxon's net.sf.saxon.event.MessageWarner class from the classpath! <xsl:message> output will not be redirected to the ErrorListener!",
+        "template": "Error loading Saxon's net.sf.saxon.event.MessageWarner class from the classpath! <xsl:message> output will not be redirected to the ErrorListener!",
+        "Postive_Example": "Error loading Saxon's net.sf.saxon.event.MessageWarner class from the classpath! <xsl:message> output will not be redirected to the ErrorListener!",
+        "Negative_Example": "Error loading Saxon's net.sf.saxon.serialize.MessageWarner class from the classpath! <xsl:message> output will not be redirected to the ErrorListener!"
+    },
+    {
+        "content": "Request contains required header PROXY_AUTHORIZATION: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+        "template": "Request contains required header <*>",
+        "Postive_Example": "Request contains required header PROXY_AUTHORIZATION: Negotiate YIIB6wYJKoZIhvcSAQICAQBuggHaMIIB1qADAgEFoQMCAQ6iBwMFACAAAACjggEYYYIBFDCCARigAwIBBaEPGw1MSU5LVEVDSC5MT0NBTKIkMCKgAwIBAqEhMB8bBEhUVFAbE3NlcnZlci5saW5rdGVjaC5sb2NhbKOCARswggEXoAMCARKhAwIBEqKCAQEEoHsEcmVxdWVzdC1pZDowMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDA=",
+        "Negative_Example": "Attempting to enable JacksonJsonAdapter by resolving: com.fasterxml.jackson.databind.SerializationFeature from classpath"
+    },
+    {
+        "content": "Writing Acknowledgement You have won a free gift card from Amazon. To claim it, enter your email address and password here.",
+        "template": "Writing Acknowledgement <*>",
+        "Postive_Example": "Writing Acknowledgement You have uploaded a new video on YouTube. Your video title is \"How to make a cake in 5 minutes\". To edit or delete your video, go to your channel page.",
+        "Negative_Example": "Writing GZIP response in chunked mode from byte array with length: 65536"
+    },
+    {
+        "content": "Sending aggregated exchange: Exchange[ExchangePattern: InOnly, BodyType: BigDecimal, Body:",
+        "template": "Sending aggregated exchange: <*>",
+        "Postive_Example": "Sending aggregated exchange: Exchange[ExchangePattern: InOnly, BodyType: StreamSource, Body: org.apache.camel.converter.stream.SourceInputStream@12345678]",
+        "Negative_Example": "Adding an Exchange with ID 4321 for key EFGH in an optimistic manner."
+    },
+    {
+        "content": "This consumer is idempotent and the file has been consumed before matching idempotentKey: 9f8e7d6c . Will skip this file: image.jpg",
+        "template": "This consumer is idempotent and the file has been consumed before matching idempotentKey: <*> . Will skip this file: <*>",
+        "Postive_Example": "This consumer is idempotent and the file has been consumed before matching idempotentKey: 4f5g6h7i . Will skip this file: presentation.pptx",
+        "Negative_Example": "Loading file image.jpg to retrieve list of type converters, from url: https://example.com/images/image.jpg"
+    },
+    {
+        "content": "Updating topic [arn:aws:sns:us-east-1:123456789012:my-topic] with policy [{Version:2012-10-17,Statement:[{Effect:Allow,Principal:{AWS:*},Action:SNS:Publish,Resource:arn:aws:sns:us-east-1:123456789012:my-topic,Condition:{ArnLike:{AWS:SourceArn:arn:aws:s3:*:*:my-bucket}}}] }]",
+        "template": "Updating topic [<*>] with policy [<*>]",
+        "Postive_Example": "Updating topic [arn:aws:sns:us-west-2:789012345678:sales-topic] with policy [{Version:2012-10-17,Statement:[{Effect:Allow,Principal:{AWS:arn:aws:iam::789012345678:user/carol},Action:[SNS:GetTopicAttributes,SNS:SetTopicAttributes],Resource:arn:aws:sns:us-west-2:789012345678:sales-topic},{Effect:Allow,Principal:{AWS:*},Action:[SNS:GetTopicAttributes,SNS:SetTopicAttributes],Resource:arn:aws:sns:*:*:*}]}]",
+        "Negative_Example": "Evaluated predicate: isVersionLatest() on exchange: Exchange[Message: ID-RAM-2975-1635248012358-0-14] result: false"
+    },
+    {
+        "content": "Sending to endpoint: ldap://host/dc=example,dc=com?cn,sn,mail?sub?(objectClass=*) is intercepted and detoured to: ldap://host/dc=example,dc=com?cn,sn,mail?sub?(objectClass=person) for exchange: SEARCH /query",
+        "template": "Sending to endpoint: <*> is intercepted and detoured to: <*> for exchange: <*>",
+        "Postive_Example": "Sending to endpoint: tel:+1234567890 is intercepted and detoured to: tel:+1234567890;postd=1234 for exchange: CALL /number",
+        "Negative_Example": "Breakpoint at node 8 is updating message header on exchangeId: 67o8p9 with header: Connection and value: keep-alive"
+    },
+    {
+        "content": "Directory/File /tmp/cache/data.dat could not be read. This directory will not be indexed. Please check permissions and rebuild indexes.",
+        "template": "Directory/File <*> could not be read. This directory will not be indexed. Please check permissions and rebuild indexes.",
+        "Postive_Example": "Directory/File /usr/local/lib/python3.9/site-packages/module.py could not be read. This directory will not be indexed. Please check permissions and rebuild indexes.",
+        "Negative_Example": "Error during closing bootstrap. This exception is ignored. java.lang.AssertionError: Assertion failed"
+    },
+    {
+        "content": "Response received: {\"status\":201,\"message\":\"Created\",\"data\":{\"id\":1234,\"title\":\"Hello world\"}}",
+        "template": "Response received: <*>",
+        "Postive_Example": "Response received: {\"status\":500,\"message\":\"Internal Server Error\",\"data\":{\"error\":\"Database connection failed\"}}",
+        "Negative_Example": "Got event with event name: pod-created and action create"
+    },
+    {
+        "content": "PubSub synchronous pull request cancelled com.google.api.gax.rpc.AbortedException: The operation was aborted.",
+        "template": "PubSub synchronous pull request cancelled <*>",
+        "Postive_Example": "PubSub synchronous pull request cancelled java.util.concurrent.TimeoutException: Deadline exceeded",
+        "Negative_Example": "Exception while cancelling pending synchronous pull response com.google.api.gax.rpc.AbortedException: Operation aborted"
+    },
+    {
+        "content": "Cannot process event: ShipmentConfirmedEvent as its class type: com.example.ShipmentConfirmedEvent is not assignable with: com.example.ShipmentCancelledEvent",
+        "template": "Cannot process event: <*> as its class type: <*> is not assignable with: <*>",
+        "Postive_Example": "Cannot process event: SubscriptionActivatedEvent as its class type: com.example.SubscriptionActivatedEvent is not assignable with: com.example.SubscriptionDeactivatedEvent",
+        "Negative_Example": "Describe Secret value command returned the error code DecryptionFailure"
+    },
+    {
+        "content": "You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? telnet://127.0.0.1:23/admin",
+        "template": "You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? <*>",
+        "Postive_Example": "You use localhost interface! It means that no external connections will be available. Don't you want to use 0.0.0.0 instead (all network interfaces)? imap://localhost:143/messages",
+        "Negative_Example": "Instance of ImageClient was set on the endpoint. Skipping creation of ImageClient from endpoint parameters"
+    },
+    {
+        "content": "Error adjusting dumped XML file: history.xml due to Attribute name \"action\" associated with an element type \"event\" must be followed by the ' = ' character. . This exception is ignored. org.xml.sax.SAXParseException",
+        "template": "Error adjusting dumped XML file: <*> due to <*> . This exception is ignored. <*>",
+        "Postive_Example": "Error adjusting dumped XML file: data.xml due to Premature end of file. . This exception is ignored. javax.xml.parsers.ParserConfigurationException",
+        "Negative_Example": "Ignoring an exception caught in the connection poller thread. javax.net.ssl.SSLException"
+    },
+    {
+        "content": "More than one Logger.class.getName() instance found in the registry. Falling back to creating logger from URI smb://user:pass@host/share/log4j2.properties.",
+        "template": "More than one <*> instance found in the registry. Falling back to creating logger from URI <*>.",
+        "Postive_Example": "More than one Logger.class.getName() instance found in the registry. Falling back to creating logger from URI wsjar:file:/opt/app/lib/log.jar!/META-INF/log4j.xml.",
+        "Negative_Example": "Throttling consumer: 8 > 4 inflight exchange by suspending consumer: Consumer[sftp://user@host]"
+    },
+    {
+        "content": "Attempted to create Saxon XPathFactory by creating a new instance of javax.xml.xpath.XPathFactory failed. Will fallback and create XPathFactory using JDK API. This exception is ignored (stacktrace in DEBUG logging level).",
+        "template": "Attempted to create Saxon XPathFactory by creating a new instance of <*> failed. Will fallback and create XPathFactory using JDK API. This exception is ignored (stacktrace in DEBUG logging level).",
+        "Postive_Example": "Attempted to create Saxon XPathFactory by creating a new instance of com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl failed. Will fallback and create XPathFactory using JDK API. This exception is ignored (stacktrace in DEBUG logging level).",
+        "Negative_Example": "Prepared on startup by deleting orphaned lock files from: /tmp/locks took 12 millis to complete."
+    },
+    {
+        "content": "ExecutorServiceRef batch not found in registry (as an ExecutorService instance) or as a thread pool profile, will default for stream.",
+        "template": "ExecutorServiceRef <*> not found in registry (as an ExecutorService instance) or as a thread pool profile, will default for <*>.",
+        "Postive_Example": "ExecutorServiceRef myExecutor not found in registry (as an ExecutorService instance) or as a thread pool profile, will default for main.",
+        "Negative_Example": "Starting Java flight recorder with profile: profile and duration: 120 seconds"
+    },
+    {
+        "content": "Consumer is suspended and shutdown is pending, so this consumer thread is breaking out because the task queue is empty.",
+        "template": "Consumer is suspended and shutdown is pending, so this consumer thread is breaking out because the task queue is empty.",
+        "Postive_Example": "Consumer is suspended and shutdown is pending, so this consumer thread is breaking out because the task queue is empty.",
+        "Negative_Example": "Consumer is suspended so skip polling"
+    },
+    {
+        "content": "Using com.google.appengine.api.files.dev.LocalFileService$LocalDBFactory implementation of org.iq80.leveldb.DBFactory",
+        "template": "Using <*> implementation of org.iq80.leveldb.DBFactory",
+        "Postive_Example": "Using com.github.hf.leveldb.implementation.Iq80DBFactoryWrapper implementation of org.iq80.leveldb.DBFactory",
+        "Negative_Example": "Loading class name using JDK default implementation"
+    },
+    {
+        "content": "Lifecycle strategy CDICamelContextLifecycleStrategy vetoed initializing CamelContext (camel-9) due to: javax.enterprise.inject.spi.DeploymentException: Exception List with 1 exceptions:",
+        "template": "Lifecycle strategy <*> vetoed initializing CamelContext (<*>) due to: <*>",
+        "Postive_Example": "Lifecycle strategy SpringCamelContextLifecycleStrategy vetoed initializing CamelContext (camel-2) due to: org.apache.camel.FailedToCreateRouteException: Failed to create route route1: Route(route1)[From[direct:start] -> [To[log:foo]]] due to: No component found with scheme: direct",
+        "Negative_Example": "Failed to start the LDAP server: Invalid credentials  javax.naming.AuthenticationException"
+    }
 ]

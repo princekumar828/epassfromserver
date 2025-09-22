@@ -55,10 +55,11 @@ class parser:
 
         if (df_data is not None):
             self.df_log = df_data
+            #I changed here as my data is in folder data/
         elif (dataset_scale == "full"):
-            self.df_log = load_data_full(dataset=dataset, data_path="")
+            self.df_log = load_data_full(dataset=dataset, data_path="data/")
         else:
-            self.df_log = load_data_2k(dataset=dataset, data_path="")
+            self.df_log = load_data_2k(dataset=dataset, data_path="data/2k/")
         self.CI_tree = index_tree()
         self.llm = llm
         self.prompt_extract = PromptTemplate(template=EXTRACT_TEMPLATE, input_variables=["log", "examples"])

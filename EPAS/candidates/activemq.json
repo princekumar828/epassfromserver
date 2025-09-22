@@ -1,32 +1,194 @@
 [
-  {
-    "content": "delivering pending commit outcome for tid: 0x0000000000000001",
-    "template": "delivering pending commit outcome for tid: <*>",
-    "Postive_Example": "delivering pending commit outcome for tid: 0x123456789ABCDEF0",
-    "Negative_Example": "Received the frame: 0x00001001"
-  },
-  {
-    "content": "Consumer (inventoryQueue) Caught: java.sql.SQLException",
-    "template": "Consumer (<*>) Caught: <*>",
-    "Postive_Example": "Consumer (orderQueue) Caught: java.util.ConcurrentModificationException",
-    "Negative_Example": "The local Exception was: NullPointerException"
-  },
-  {
-    "content": "New connection for broker1: client IP: 192.168.4.90, port: 61613, protocol: MQTT",
-    "template": "New connection for broker1: <*>",
-    "Postive_Example": "New connection for broker1: client IP: 10:0:4:145: port: 5672: protocol: STOMP",
-    "Negative_Example": "JMS exception on closing consumer after request with one-shot mode true"
-  },
-  {
-    "content": "Failed to stop MQTT transport org.eclipse.paho.client.mqttv3.MqttException: Timed out waiting for a response from the server",
-    "template": "Failed to stop MQTT transport <*>",
-    "Postive_Example": "Failed to stop MQTT transport java.net.UnknownHostException: Unable to resolve host \"mqtt.example.com\": No address associated with hostname",
-    "Negative_Example": "Exception encountered closing JMS Connection javax.jms.IllegalStateException: The Session is closed"
-  },
-  {
-    "content": "JmsConnector handling loss of connection [{id=ID:localhost-6789, clientId=client7, transport=Transport: nio://localhost/127.0.0.1:61618}]",
-    "template": "JmsConnector handling loss of connection [<*>]",
-    "Postive_Example": "JmsConnector handling loss of connection [{id=ID:remotehost-4567, clientId=client11, transport=Transport: fanout:(ssl://remotehost/192.168.1.103:61617,tcp://remotehost/192.168.1.104:61616)]",
-    "Negative_Example": "Could not create pooled connection factory: fanout:(static:(tcp://host1:61616,tcp://host2:61616))"
-  }
+    {
+        "content": "Account::~Account()",
+        "template": "<*>::~<*>()",
+        "Postive_Example": "Category::~Category()",
+        "Negative_Example": "Account::getBalance()"
+    },
+    {
+        "content": "broker-49 Ignoring duplicate subscription from broker-50, sub: ActiveMQQueue[chocolate] is duplicate by network subscription with equal or higher network priority: ActiveMQQueue[candy], networkConsumerIds: [ID:broker-51-4681, ID:broker-52-5392]",
+        "template": "<*> Ignoring duplicate subscription from <*>, sub: <*> is duplicate by network subscription with equal or higher network priority: <*>, networkConsumerIds: <*>",
+        "Postive_Example": "broker-13 Ignoring duplicate subscription from broker-14, sub: ActiveMQTopic[eggs] is duplicate by network subscription with equal or higher network priority: ActiveMQTopic[cheese], networkConsumerIds: [ID:broker-15-9753, ID:broker-16-8642]",
+        "Negative_Example": "Not replaying [msg-5173] for [queue-11] to origin due to existing local consumer: [ConsumerInfo{consumerId=11, destination=queue-11, selector=type = 'text'}]"
+    },
+    {
+        "content": "Policy not applied! Unknown member cn=Eve,ou=Users,dc=example,dc=com in policy entry cn=Editors,ou=Groups,dc=example,dc=com java.lang.NullPointerException",
+        "template": "Policy not applied! Unknown member <*> in policy entry <*> <*>",
+        "Postive_Example": "Policy not applied! Unknown member cn=Ella,o=SAP,c=DE in policy entry ou=SAP,cn=Ella,o=SAP,c=DE javax.naming.AuthenticationException",
+        "Negative_Example": "Policy not applied! Error processing object removal for removal of NullPointerException item3"
+    },
+    {
+        "content": "Consumer on destination topic2 committing JMS Session for message: ObjectMessage{body=Order{id=123, status='pending'}}",
+        "template": "Consumer on destination <*> committing JMS Session for message: <*>",
+        "Postive_Example": "Consumer on destination queue4 committing JMS Session for message: ObjectMessage{body=Customer{name='Bob', address='123 Main Street'}}",
+        "Negative_Example": "Consumer on destination topic4 rolling back JMS Session for message: Message ID: 3210987654, Content: Bar Foo"
+    },
+    {
+        "content": "PUT to https://example.com/api/invoices/156 failed with: org.springframework.web.client.ResourceAccessException: I/O error on PUT request for \"https://example.com/api/invoices/156\": Connection reset; nested exception is java.net.SocketException: Connection reset",
+        "template": "PUT to <*> failed with: <*>",
+        "Postive_Example": "PUT to https://example.com/api/customers/101 failed with: java.io.IOException: Broken pipe",
+        "Negative_Example": "ActiveMQAsyncRequest syncFolder error: org.apache.commons.net.ftp.FTPConnectionClosedException: Connection closed without indication"
+    },
+    {
+        "content": "Broker15 Replacing duplicate subscription [15, queue://grault, local] with sub from Broker16, which has a higher priority, new sub: [16, queue://grault, network], networkConsumerIds: [16]",
+        "template": "<*> Replacing duplicate subscription <*> with sub from <*>, which has a higher priority, new sub: <*>, networkConsumerIds: <*>",
+        "Postive_Example": "Broker1 Replacing duplicate subscription [1, topic://test, local] with sub from Broker2, which has a higher priority, new sub: [2, topic://test, network], networkConsumerIds: [2]",
+        "Negative_Example": "Failed to remove duplicated sub as a result of sub with higher priority, sub: Sub-11, Exception=OutOfMemoryError"
+    },
+    {
+        "content": "Failed to load next journal location after: /mnt/journal/2023-10-19.log MalformedURLException",
+        "template": "Failed to load next journal location after: <*> <*>",
+        "Postive_Example": "Failed to load next journal location after: /etc/journal/2023-10-21.log OutOfMemoryError",
+        "Negative_Example": "failed to complete a sweep for blocked clients [NullPointerException]"
+    },
+    {
+        "content": "Failed to remove duplicated sub as a result of sub with higher priority, sub: Sub-12, Exception=StackOverflowError",
+        "template": "Failed to remove duplicated sub as a result of sub with higher priority, sub: <*>, <*>",
+        "Postive_Example": "Failed to remove duplicated sub as a result of sub with higher priority, sub: Sub-5, Exception=ConcurrentModificationException",
+        "Negative_Example": "failed to deliver pending outcome for tid: 4321 IOException"
+    },
+    {
+        "content": "Could not accept connection from 192.168.4.35 : Invalid argument (java.net.SocketException: Invalid argument)",
+        "template": "Could not accept connection <*> : <*> (<*>)",
+        "Postive_Example": "Could not accept connection from 172.16.3.40 : Network is unreachable (java.net.NetworkUnreachableException: Network is unreachable)",
+        "Negative_Example": "The connection to '127.0.0.1:8000' is taking a long time to shutdown."
+    },
+    {
+        "content": "Failed to stop MQTT transport java.lang.InterruptedException: Interrupted while waiting for message delivery confirmation",
+        "template": "Failed to stop MQTT transport <*>",
+        "Postive_Example": "Failed to stop MQTT transport java.net.UnknownHostException: Unable to resolve host \"mqtt.example.com\": No address associated with hostname",
+        "Negative_Example": "unexpected ex on produce java.lang.ArrayIndexOutOfBoundsException"
+    },
+    {
+        "content": "Could not get JDBC connection for checkpoint: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection",
+        "template": "Could not get JDBC connection for checkpoint: <*>",
+        "Postive_Example": "Could not get JDBC connection for checkpoint: com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host localhost, port 1433 has failed",
+        "Negative_Example": "Fetched new connection from the pool: Connection@2a3b4c5d"
+    },
+    {
+        "content": "1234 , becoming master with lease expiry 2023-10-20T12:10:15Z on dataSource: sales",
+        "template": "<*> , becoming master with lease expiry <*> on dataSource: <*>",
+        "Postive_Example": "9876 , becoming master with lease expiry 2023-10-20T12:17:15Z on dataSource: notifications",
+        "Negative_Example": "Received msg with content: Hello world"
+    },
+    {
+        "content": "failed to delete Temporary Topic \"temp-topic://ID:localhost-1098-7654-3210-5:5:5\" on closing pooled connection: org.apache.activemq.transport.InactivityIOException: Channel was inactive for too long",
+        "template": "failed to delete Temporary Topic \"<*>\" on closing pooled connection: <*>",
+        "Postive_Example": "failed to delete Temporary Topic \"temp-queue://ID:localhost-1234-5678-9101-1:1:1\" on closing pooled connection: javax.jms.JMSException: Could not delete file temp-queue://ID:localhost-1234-5678-9101-1:1:1",
+        "Negative_Example": "Close connection failed for connection: rmi://host/service. This exception will be ignored. java.rmi.ConnectException: Connection refused to host."
+    },
+    {
+        "content": "full response {\"status\": \"OK\", \"data\": {\"items\": [{\"id\": 3, \"price\": 19.99}, {\"id\": 4, \"price\": 24.99}]}}",
+        "template": "full response <*>",
+        "Postive_Example": "full response {\"status\": \"ERROR\", \"message\": \"Invalid format\"}",
+        "Negative_Example": "Not re-adding to DLQ: 3b2a1f9e, dest: topic4"
+    },
+    {
+        "content": "An exception was raised while performing poll writes java.lang.ArithmeticException: / by zero",
+        "template": "An exception was raised while performing poll writes <*>",
+        "Postive_Example": "An exception was raised while performing poll writes java.lang.NoSuchMethodError: com.example.MyClass.myMethod()",
+        "Negative_Example": "Should not have failed while stealing the link: Malformed response"
+    },
+    {
+        "content": "Results for destination= London , producers= 3 , consumers= 7 , deliveryMode= async",
+        "template": "Results for destination= <*> , producers= <*> , consumers= <*> , deliveryMode= <*>",
+        "Postive_Example": "Results for destination= New York , producers= 5 , consumers= 10 , deliveryMode= sync",
+        "Negative_Example": "Finished TestProducer for destination (reviews)"
+    },
+    {
+        "content": "Failed to add a new destination for DTO: PaymentDTO java.lang.NumberFormatException",
+        "template": "Failed to add a new destination for DTO: <*> <*>",
+        "Postive_Example": "Failed to add a new destination for DTO: AccountDTO java.util.ConcurrentModificationException",
+        "Negative_Example": "Failed to remove session 4a2b3c NullPointerException"
+    },
+    {
+        "content": "Could not transfer the template file to journal, transferFile= /dev/template_7.bin java.lang.OutOfMemoryError",
+        "template": "Could not transfer the template file to journal, transferFile= <*> <*>",
+        "Postive_Example": "Could not transfer the template file to journal, transferFile= /home/user/template_2.docx java.nio.file.AccessDeniedException",
+        "Negative_Example": "TransportLoggerFactory could not be stopped, reason: OutOfMemoryError java.lang.OutOfMemoryError"
+    },
+    {
+        "content": "failed to deliver post consumerControl dispatch-wakeup, to destination: s3://my-bucket/my-key com.amazonaws.SdkClientException",
+        "template": "failed to deliver post consumerControl dispatch-wakeup, to destination: <*> <*>",
+        "Postive_Example": "failed to deliver post consumerControl dispatch-wakeup, to destination: tcp://127.0.0.1:1883 org.eclipse.paho.client.mqttv3.MqttException",
+        "Negative_Example": "Having to Rollback - caught an exception: java.lang.UnsupportedOperationException"
+    },
+    {
+        "content": "Connection ID:tcp://127.0.0.3:61616 being aborted because of slow consumer: ID:localhost-3456-7890-1213 on destination: queue://alerts",
+        "template": "Connection <*> being aborted because of slow consumer: <*> on destination: <*>",
+        "Postive_Example": "Connection ID:tcp://192.168.0.1:61616 being aborted because of slow consumer: ID:localhost-4321-8765-1098 on destination: topic://news",
+        "Negative_Example": "slowConsumer abort ignored, no connection in context: null"
+    },
+    {
+        "content": "Looking for key \"phone\" but not found in fileMap: {\"id\": 789, \"address\": \"123 Main Street\"}",
+        "template": "Looking for key <*> but not found in fileMap: <*>",
+        "Postive_Example": "Looking for key \"id\" but not found in fileMap: {\"name\": \"Charlie\", \"email\": \"charlie@gmail.com\"}",
+        "Negative_Example": "Creating consumer for destination temp-queue://reply-123"
+    },
+    {
+        "content": "The exception handler android.app.ActivityThread threw this exception: android.os.RemoteException while trying to handle this exception: android.content.ActivityNotFoundException",
+        "template": "The exception handler <*> threw this exception: <*> while trying to handle this exception: <*>",
+        "Postive_Example": "The exception handler org.springframework.web.servlet.DispatcherServlet threw this exception: org.springframework.web.util.NestedServletException while trying to handle this exception: org.springframework.beans.factory.BeanCreationException",
+        "Negative_Example": "Caught exception during rollback on connection: org.hibernate.exception.ConstraintViolationException: could not execute batch"
+    },
+    {
+        "content": "STOMPTransportFilter: Pending message cursor [queue://chat] is full, temp usage (40%) or memory usage (45%) limit reached, blocking message add() pending the release of resources.",
+        "template": "<*>: Pending message cursor [<*>] is full, temp usage (<*>%) or memory usage (<*>%) limit reached, blocking message add() pending the release of resources.",
+        "Postive_Example": "TcpTransportServer[tcp://localhost]: Pending message cursor [topic://movies] is full, temp usage (25%) or memory usage (30%) limit reached, blocking message add() pending the release of resources.",
+        "Negative_Example": "com.example.cache.CacheManager@6f94fa3e, skip resetBatch during pending completion for: order789"
+    },
+    {
+        "content": "Some journal files are missing: [journal_2023_10_25_06_30.log, journal_2023_10_25_06_31.log]",
+        "template": "Some journal files are missing: <*>",
+        "Postive_Example": "Some journal files are missing: [journal-2023-10-25-09-30.log, journal-2023-10-25-09-31.log, journal-2023-10-25-09-32.log, journal-2023-10-25-09-33.log]",
+        "Negative_Example": "KahaDB failed to store to Journal, command of type: ADD_MESSAGE"
+    },
+    {
+        "content": "Failure occured soon after the discovery event was generated. It will be clasified as a connection failure: connection reset",
+        "template": "Failure occured soon after the discovery event was generated. It will be clasified as a connection failure: <*>",
+        "Postive_Example": "Failure occured soon after the discovery event was generated. It will be clasified as a connection failure: SSL handshake failed",
+        "Negative_Example": "exception on recovery check of: dataFile10 , at /media/cdrom/ DeviceNotFoundException"
+    },
+    {
+        "content": "Could not create an endpoint. javax.xml.ws.soap.SOAPFaultException: Server was unable to process request",
+        "template": "Could not create an endpoint. <*>",
+        "Postive_Example": "Could not create an endpoint. org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'endpointBean'",
+        "Negative_Example": "Should not have failed while stealing the link: File not found"
+    },
+    {
+        "content": "Endpoint JMSQueue[queue://serviceQueue] will not receive any messages due to broker 'zero prefetch' configuration for: serviceQueue",
+        "template": "Endpoint <*> will not receive any messages due to broker 'zero prefetch' configuration for: <*>",
+        "Postive_Example": "Endpoint JMSQueue[queue://notificationQueue] will not receive any messages due to broker 'zero prefetch' configuration for: notificationQueue",
+        "Negative_Example": "Test Transport Listener received Exception: java.net.ConnectException: Connection timed out"
+    },
+    {
+        "content": "setting transport connector URI property: propertyName=\"wireFormat.useCompression\"; value=\"false\"",
+        "template": "setting transport connector URI property: propertyName=\"<*>\"; value=\"<*>\"",
+        "Postive_Example": "setting transport connector URI property: propertyName=\"brokerName\"; value=\"tcp://localhost:61616\"",
+        "Negative_Example": "Starting test on Temp Destinations using a temporary: stack"
+    },
+    {
+        "content": "Close connection failed for connection: mongodb://user:pass@host/db. This exception will be ignored. com.mongodb.MongoSocketException: Socket closed.",
+        "template": "Close connection failed for connection: <*>. This exception will be ignored.<*>",
+        "Postive_Example": "Close connection failed for connection: amqp://user@host/vhost/exchange/routingKey?param=value. This exception will be ignored. com.rabbitmq.client.ShutdownSignalException",
+        "Negative_Example": "Should not have failed while stealing the link: java.net.UnknownHostException: Host not found"
+    },
+    {
+        "content": "Not replaying [msg-7391] for [queue-9] to origin due to existing local consumer: [ConsumerInfo{consumerId=9, destination=queue-9, selector=date < '2023-10-31'}]",
+        "template": "Not replaying [<*>] for [<*>] to origin due to existing local consumer: <*>",
+        "Postive_Example": "Not replaying [msg-6284] for [topic-10] to origin due to existing local consumer: [ConsumerInfo{consumerId=10, destination=topic-10, selector=null}]",
+        "Negative_Example": "JMS exception on closing consumer after request with one-shot mode -1"
+    },
+    {
+        "content": "JMSException encounter closing InternalClient connection - ignoring javax.jms.JMSException: Connection closed",
+        "template": "JMSException encounter closing InternalClient connection - ignoring <*>",
+        "Postive_Example": "JMSException encounter closing InternalClient connection - ignoring org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing",
+        "Negative_Example": "Error recovering index free page list java.io.IOException: No space left on device"
+    },
+    {
+        "content": "Sending : {command:\"mv\" , source:\"/home/user/document.docx\" , destination:\"/home/user/Documents/document.docx\" , verbose:true",
+        "template": "Sending : <*>",
+        "Postive_Example": "Sending : {command: \"date\", format: \"%Y-%m-%d %H:%M:%S\", timezone: \"UTC\"}",
+        "Negative_Example": "Creating producer for destination queue://status"
+    }
 ]

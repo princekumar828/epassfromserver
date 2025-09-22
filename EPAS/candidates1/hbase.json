@@ -1,0 +1,130 @@
+[
+    {
+        "content": "RMI TCP Connection(1)-127.0.0.1 : stopped",
+        "template": "<*> : stopped"
+    },
+    {
+        "content": "An error occurred while verifying if [/usr/local/lib] is a valid directory. Returning 'not valid' and continuing. java.nio.file.DirectoryNotEmptyException: /usr/local/lib",
+        "template": "An error occurred while verifying if [<*>] is a valid directory. Returning 'not valid' and continuing. <*>"
+    },
+    {
+        "content": "Canonical hostname for SASL principal is the same with IP address: admin-01, admin-01. Check DNS configuration or consider SecurityConstants.UNSAFE_HBASE_CLIENT_KERBEROS_HOSTNAME_DISABLE_REVERSEDNS=true",
+        "template": "Canonical hostname for SASL principal is the same with IP address: <*>, <*>. Check DNS configuration or consider SecurityConstants.UNSAFE_HBASE_CLIENT_KERBEROS_HOSTNAME_DISABLE_REVERSEDNS=true"
+    },
+    {
+        "content": "Copying coprocessor jar '/var/log/hbase/coprocessors/log-analyzer-coprocessor.jar' to '/tmp/log/hbase/coprocessors/log-analyzer-coprocessor.jar'.",
+        "template": "Copying coprocessor jar '<*>' to '<*>'."
+    },
+    {
+        "content": "SASL client doing encrypted handshake for addr = 172.16.0.11:50030, datanodeId = DatanodeInfoWithStorage[172.16.0.11:50030,DS-6e7f3f0g-8f01-42b5-fg53-2k0g3d9f8d1h,DISK]",
+        "template": "SASL client doing encrypted handshake for addr = <*>, datanodeId = <*>"
+    },
+    {
+        "content": "rows Rows each client runs. Default: 4000 . In case of randomReads and randomSeekScans this could be specified along with --size to specify the number of rows to be scanned within the total range specified by the size.",
+        "template": "rows Rows each client runs. Default: <*> . In case of randomReads and randomSeekScans this could be specified along with --size to specify the number of rows to be scanned within the total range specified by the size."
+    },
+    {
+        "content": "Found existing old file: /proc/dir . It could be some leftover of an old installation. It should be a folder instead. So moving it to /tmp",
+        "template": "Found existing old file: <*> . It could be some leftover of an old installation. It should be a folder instead. So moving it to <*>"
+    },
+    {
+        "content": "3c4d5e6 : Received a bulk load marker from primary, but the family is not found. Ignoring. StoreDescriptor: {name=ff, blocksize=8192, bloomType=ROWPREFIX_FIXED_LENGTH, compression=SNAPPY, inMemory=true}",
+        "template": "<*> : Received a bulk load marker from primary, but the family is not found. Ignoring. StoreDescriptor: <*>"
+    },
+    {
+        "content": "Exception details for failure to load WALProvider. android.database.sqlite.SQLiteDatabaseLockedException: database is locked (code 5)",
+        "template": "Exception details for failure to load WALProvider. <*>"
+    },
+    {
+        "content": "9c1d2e3b : Skipping replaying region event :{ encodedRegionName: \"9c1d2e3b\" eventType: MERGE } because its sequence id is smaller than this regions lastReplayedOpenRegionSeqId  of 4096",
+        "template": "<*> : Skipping replaying region event :<*> because its sequence id is smaller than this regions lastReplayedOpenRegionSeqId  of <*>"
+    },
+    {
+        "content": "Loaded HFile /hbase/data/default/table4/region4/family4/4567890123 into region4 as /hbase/archive/data/default/table4/region4/family4/4567890123 - updating store file list.",
+        "template": "Loaded HFile <*> into <*> as <*> - updating store file list."
+    },
+    {
+        "content": "Configuration \"dfs.client.read.shortcircuit.skip.checksum\" should not be set to true. HBase checksum doesn't require it, see https://issues.apache.org/jira/browse/HBASE-6868. This option is only useful for non-HBase applications that use HDFS directly.",
+        "template": "Configuration \"dfs.client.read.shortcircuit.skip.checksum\" should not be set to true. <*>"
+    },
+    {
+        "content": "Unable to load configured flush throughput controller 'com.cassandra.CustomFlushController', load default throughput controller org.apache.cassandra.db.commitlog.PeriodicCommitLogExecutorService instead java.lang.IllegalAccessException: Class org.apache.cassandra.config.DatabaseDescriptor can not access a member of class com.cassandra.CustomFlushController with modifiers \"private\"",
+        "template": "Unable to load configured flush throughput controller '<*>', load default throughput controller <*> instead <*>"
+    },
+    {
+        "content": "Error disposing of SASL server: java.lang.NoSuchMethodError: org.apache.hadoop.security.SaslRpcServer$SaslDigestCallbackHandler.<init>(Ljava/lang/String;Ljava/lang/String;)V",
+        "template": "Error disposing of SASL server: <*>"
+    },
+    {
+        "content": "Bloom filter turned off by CF config for /hbase/data/default/notification/2b1a0e9f8g7h6i5j4k3l2m/n/o/q/5p9q0r1s2t3u4v5w6x7y8z9a0b1c2d3e",
+        "template": "Bloom filter turned off by CF config for <*>"
+    },
+    {
+        "content": "Unable to roll the log java.lang.SecurityException: Access to system property \"log4j.configurationFile\" is denied",
+        "template": "Unable to roll the log <*>"
+    },
+    {
+        "content": "Command-line invocation of HBase Thrift server threw exception org.apache.hadoop.hbase.security.AccessDeniedException: Insufficient permissions for user 'hbase' (global, action=ADMIN)",
+        "template": "Command-line invocation of HBase Thrift server threw exception <*>"
+    },
+    {
+        "content": "Requesting log roll because we exceeded slow sync threshold; time=19 ms, threshold=14 ms, current pipeline: [read, compress, encrypt, write]",
+        "template": "Requesting log roll because we exceeded slow sync threshold; time=<*> ms, threshold=<*> ms, current pipeline: <*>"
+    },
+    {
+        "content": "Inserter caught exception javax.validation.ConstraintViolationException: Validation failed for classes [com.example.Inserter] during persist time for groups [javax.validation.groups.Default, ]",
+        "template": "Inserter caught exception <*>"
+    },
+    {
+        "content": "Not stopping coprocessor org.apache.hadoop.hbase.coprocessor.WALObserver because not active (state= STOPPED )",
+        "template": "Not stopping coprocessor <*> because not active (state= <*> )"
+    },
+    {
+        "content": "Hadoop 3.2 and below use unshaded protobuf. Error: org.apache.hadoop.hive.serde2.SerDeException: org.codehaus.jackson.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')",
+        "template": "Hadoop 3.2 and below use unshaded protobuf. <*>"
+    },
+    {
+        "content": "versions= 5 , starttime= 2021-10-25 18:34:00 , endtime= 2021-10-25 18:39:00 , keepDeletedCells= false , visibility labels= private",
+        "template": "versions= <*> , starttime= <*> , endtime= <*> , keepDeletedCells= <*> , visibility labels= <*>"
+    },
+    {
+        "content": "Current backup has an incremental backup ancestor, touching its image manifest in /usr/local/backup/image/image-2023-10-26-03-32-38.manifest to construct the dependency.",
+        "template": "Current backup has an incremental backup ancestor, touching its image manifest in <*> to construct the dependency."
+    },
+    {
+        "content": "Slow datanode: 192.168.1.16:50010 , data length= 262144 , duration= 300 ms, unfinishedReplicas= 8 , lastAckTimestamp= 1634642447000 , monitor name: DataNodeMonitor",
+        "template": "Slow datanode: <*> , data length= <*> , duration= <*> ms, unfinishedReplicas= <*> , lastAckTimestamp= <*> , monitor name: <*>"
+    },
+    {
+        "content": "Failed to open reader when trying to compute store file size for /data/hbase/data/default/table-8/region-8/67890abcdef/family-7 , ignoring org.apache.hadoop.hbase.regionserver.wal.WALSplitter.CorruptedWALException",
+        "template": "Failed to open reader when trying to compute store file size for <*> , ignoring <*>"
+    },
+    {
+        "content": "Interrupted while waiting for the wal of 'eu-central-1' to roll. If later replication tests fail, it's probably because we should still be waiting.",
+        "template": "Interrupted while waiting for the wal of '<*>' to roll. If later replication tests fail, it's probably because we should still be waiting."
+    },
+    {
+        "content": "Restore incremental backup from directory /home/admin/backup/2021-10-21 from hbase tables admin,config to tables admin_old,config_old",
+        "template": "Restore <*> backup from directory <*> from hbase tables <*> to tables <*>"
+    },
+    {
+        "content": "Unexpected interrupted exception during bulk load org.apache.hadoop.hbase.ipc.RemoteWithExtrasException(org.apache.hadoop.hbase.RegionTooBusyException): Above memstore limit",
+        "template": "Unexpected interrupted exception during bulk load <*>"
+    },
+    {
+        "content": "Failed find method getBlock in dfsclient; no hedged read metrics: java.io.IOException: Could not obtain block",
+        "template": "Failed find method <*> in dfsclient; no hedged read metrics: <*>"
+    },
+    {
+        "content": "Removed replica= 1515 of {ENCODED = >636f756e7465722d726567696f6e2d31352e646174, NAME = >'counter-region-15.dat', STARTKEY = >'', ENDKEY = >''}",
+        "template": "Removed replica= <*> of <*>"
+    },
+    {
+        "content": "Skipping hole fix; both the hole left-side and right-side RegionInfos are UNDEFINED; left=<RegionInfo: test,,2.1588230740>, right=<RegionInfo: test,,3.1588230740>",
+        "template": "Skipping hole fix; both the hole left-side and right-side RegionInfos are UNDEFINED; left=<<*>>, right=<<*>>"
+    },
+    {
+        "content": "Trying to bulk load hfile /opt/hbase/data/test/table_4/hfile_14 with size: 1792 bytes can be problematic as it may lead to oversplitting.",
+        "template": "Trying to bulk load hfile <*> with size: <*> bytes can be problematic as it may lead to oversplitting."
+    }
+]

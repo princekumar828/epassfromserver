@@ -73,32 +73,32 @@ benchmark_settings = {
     },
 
    'hbase': {
-        'log_file': 'data/hbase/hbase.log',
+        'log_file': 'hbase/hbase_full.log',
         'log_format': '<Content>',
     },
 
     'hive': {
-        'log_file': 'data/hive/hive.log',
+        'log_file': 'hive/hive_full.log',
         'log_format': '<Content>',
     },
 
     'OpenSearch': {
-        'log_file': 'data/OpenSearch/OpenSearch_full.log',
+        'log_file': 'OpenSearch/OpenSearch_full.log',
         'log_format': '<Content>',
     },
 
     'camel': {
-        'log_file': 'data/camel/camel.log',
+        'log_file': 'camel/camel_full.log',
         'log_format': '<Content>',
     },
 
     'activemq': {
-        'log_file': 'data/activemq/activemq.log',
+        'log_file': 'activemq/activemq_full.log',
         'log_format': '<Content>',
     },
 
     'CoreNLP': {
-        'log_file': 'data/CoreNLP/CoreNLP.log',
+        'log_file': 'CoreNLP/CoreNLP_full.log',
         'log_format': '<Content>',
     },
 }
@@ -106,7 +106,7 @@ benchmark_settings = {
 # datasets = ['Apache', 'BGL', 'HDFS', 'HPC', 'Hadoop', 'HealthApp', 'Linux', 'Mac', 'OpenSSH', 'OpenStack', 'Proxifier',
 #             'Spark', 'Thunderbird', 'Zookeeper', 'hbase', 'hive', 'OpenSearch', 'camel', 'activemq', 'CoreNLP']
 
-datasets = [ 'hbase', 'hive', 'OpenSearch', 'camel', 'activemq', 'CoreNLP']
+datasets = ['Proxifier', 'hbase', 'hive', 'OpenSearch', 'camel', 'activemq', 'CoreNLP']
 
 
 def generate_logformat_regex(logformat):
@@ -156,8 +156,8 @@ def load_data_full(dataset, data_path=""):
     return df_log
 
 def load_groundtruth_full(dataset, data_path=""):
-    # ground_truth_path = f"{data_path}/{dataset}/{dataset}_full.log_structured.csv"
-    ground_truth_path = f"{data_path}/{dataset}/{dataset}.GeneralAnnotation.csv"
+    ground_truth_path = f"{data_path}/{dataset}/{dataset}_full.log_structured.csv"
+   # ground_truth_path = f"{data_path}/{dataset}/{dataset}.GeneralAnnotation.csv"
     ground_truth = pd.read_csv(ground_truth_path)
     return ground_truth
 
@@ -233,7 +233,7 @@ benchmark_settings_2k = {
     },
 
     'Proxifier': {
-        'log_file': 'Proxifier/Proxifier_2k.log',
+        'log_file': 'data/Proxifier/Proxifier_2k.log',
         'log_format': '\[<Time>\] <Program> - <Content>',
     },
 

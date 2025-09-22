@@ -141,7 +141,7 @@ def candidate_set_construction_step2(path, dataset_now, candidate_path, rate):
     candidates2 = []
 
     for candidate in candidates:
-        print(candidate)
+       
         NE = None
         while (NE is None):
             NE = sample_logs_step2(all_logs, candidate, log_template_map[candidate], id_map[candidate], "N", log_template_map)

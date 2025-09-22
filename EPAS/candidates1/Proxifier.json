@@ -1,0 +1,130 @@
+[
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS",
+        "template": "<*> open through proxy <*> HTTPS"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 10279 bytes (10.0 KB) sent, 252320 bytes (246 KB) received, lifetime 03:08",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "tcpconn.tencent.com:80 close, 149 bytes sent, 121 bytes received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 483 bytes sent, 426 bytes received, lifetime 00:01",
+        "template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 659 bytes sent, 19955 bytes (19.4 KB) received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 1165 bytes (1.13 KB) sent, 815 bytes received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 2177 bytes (2.12 KB) sent, 10040 bytes (9.80 KB) received, lifetime 01:24",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "183.62.156.108:22 open through proxy socks.cse.cuhk.edu.hk:1080 SOCKS5",
+        "template": "<*> open through proxy <*> SOCKS5"
+    },
+    {
+        "content": "www.dropbox.com:443 close, 1350 bytes (1.31 KB) sent, 8652 bytes (8.44 KB) received, lifetime 01:00",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "tcpconn2.tencent.com:80 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS",
+        "template": "<*> open through proxy <*> HTTPS"
+    },
+    {
+        "content": "imgcache.gtimg.cn:80 close, 214 bytes sent, 532 bytes received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 5678 bytes (5.54 KB) sent, 23316 bytes (22.7 KB) received, lifetime 00:55",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "get.sogou.com:80 close, 859 bytes sent, 336 bytes received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 1292 bytes (1.26 KB) sent, 2571 bytes (2.51 KB) received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 571 bytes sent, 4489 bytes (4.38 KB) received, lifetime 00:04",
+        "template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "183.60.48.250:443 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS",
+        "template": "<*> open through proxy <*> HTTPS"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 6424 bytes (6.27 KB) sent, 4130 bytes (4.03 KB) received, lifetime 02:06",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 14293 bytes (13.9 KB) sent, 11101 bytes (10.8 KB) received, lifetime 14:29",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "tcpconn4.tencent.com:80 error : Could not connect through proxy proxy.cse.cuhk.edu.hk:5070 - Proxy closed the connection unexpectedly.",
+        "template": "<*> error : Could not connect through proxy <*> - Proxy closed the connection unexpectedly."
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 3107 bytes (3.03 KB) sent, 2966 bytes (2.89 KB) received, lifetime 00:05",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 13536 bytes (13.2 KB) sent, 130755 bytes (127 KB) received, lifetime 02:41",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 3942 bytes (3.84 KB) sent, 71238 bytes (69.5 KB) received, lifetime 00:12",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 1320 bytes (1.28 KB) sent, 1644820 bytes (1.56 MB) received, lifetime 00:30",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "ts1.qq.com:8000 open through proxy proxy.cse.cuhk.edu.hk:5070 HTTPS",
+        "template": "<*> open through proxy <*> HTTPS"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 3996 bytes (3.90 KB) sent, 42825 bytes (41.8 KB) received, lifetime 02:08",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 1402 bytes (1.36 KB) sent, 19453 bytes (18.9 KB) received, lifetime 00:06",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "dns.weixin.qq.com:443 close, 357 bytes sent, 3485 bytes (3.40 KB) received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "security.ie.sogou.com:80 close, 691 bytes sent, 184 bytes received, lifetime <1 sec",
+        "template": "<*> close, <*> bytes sent, <*> bytes received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 4831 bytes (4.71 KB) sent, 505268 bytes (493 KB) received, lifetime 00:18",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "qqmail.tencent.com:12000 error : Could not connect through proxy proxy.cse.cuhk.edu.hk:5070 - Proxy server cannot establish a connection with the target, status code 403",
+        "template": "<*> error : Could not connect through proxy <*> - Proxy server cannot establish a connection with the target, status code <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 1840 bytes (1.79 KB) sent, 1212 bytes (1.18 KB) received, lifetime 03:05",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    },
+    {
+        "content": "proxy.cse.cuhk.edu.hk:5070 close, 2998 bytes (2.92 KB) sent, 163400 bytes (159 KB) received, lifetime 00:01",
+        "template": "<*> close, <*> bytes (<*>) sent, <*> bytes (<*>) received, lifetime <*>"
+    }
+]

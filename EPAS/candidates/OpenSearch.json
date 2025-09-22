@@ -1,32 +1,194 @@
 [
-  {
-    "content": "[User] Found stale index [123]. Cleaning it up",
-    "template": "[<*>] Found stale index [<*>]. Cleaning it up",
-    "Postive_Example": "[metadata.name()] Found stale index [indexSnId]. Cleaning it up",
-    "Negative_Example": "Checking static index coupon"
-  },
-  {
-    "content": "Failed to load repository data generation [16] because a concurrent operation moved the current generation to [17] java.io.SyncFailedException",
-    "template": "Failed to load repository data generation [<*>] because a concurrent operation moved the current generation to [<*>] <*>",
-    "Postive_Example": "Failed to load repository data generation [9] because a concurrent operation moved the current generation to [10] java.util.ConcurrentModificationException",
-    "Negative_Example": "Failed to call listener on global ordinals loading java.lang.SecurityException"
-  },
-  {
-    "content": "--> make sure shards are only allocated on tag1 with value1 and value2",
-    "template": "--> make sure shards are only allocated on tag1 with value1 and value2",
-    "Postive_Example": "--> make sure shards are only allocated on tag1 with value1 and value2",
-    "Negative_Example": "--> start the shards (only primaries)"
-  },
-  {
-    "content": "local tasks [{\"id\":11,\"state\": \"FAILED\", \"start_time\": \"2023-10-26T03:48:34,567Z\", \"end_time\": \"2023-10-26T03:49:12,789Z\", \"failure_reason\": \"IOException\", \"node\":{\"id\": \"node-11\", \"name\": \"Node 11\", \"host\": \"192,168,0,11\", \"port\": 8080}}]",
-    "template": "local tasks [<*>]",
-    "Postive_Example": "local tasks [{\"id\":5,\"state\":\"RUNNING\",\"start_time\":\"2023-10-26T03:54:12.345Z\",\"node\":{\"id\":\"node-5\",\"name\":\"Node 5\",\"host\":\"192.168.0.5\",\"port\":8080}}]",
-    "Negative_Example": "error while reading response for trace purposes java.io.EOFException: End of input at line 1 column 1 path $"
-  },
-  {
-    "content": "shard_6 becoming primary of index_6 with missing lease: [term=2, version=3, source=recovery from store]",
-    "template": "<*> becoming primary of <*> with missing lease: <*>",
-    "Postive_Example": "shard_14 becoming primary of index_14 with missing lease: [term=3, version=4, source=create settings]",
-    "Negative_Example": "[shard14] writing shard state, reason [deleted]"
-  }
+    {
+        "content": "Done Cluster Health, status clusterHealth.getStatus()=DOWN",
+        "template": "Done Cluster Health, status <*>",
+        "Postive_Example": "Done Cluster Health, status clusterHealth.getStatus()=MAINTENANCE",
+        "Negative_Example": "Start the shards (primaries)"
+    },
+    {
+        "content": "testRelocationWhileIndexingRandom(numRelocations= 6 , numberOfReplicas= 3 , numberOfNodes= 10 )",
+        "template": "testRelocationWhileIndexingRandom(numRelocations= <*> , numberOfReplicas= <*> , numberOfNodes= <*> )",
+        "Postive_Example": "testRelocationWhileIndexingRandom(numRelocations= 13 , numberOfReplicas= 10 , numberOfNodes= 17 )",
+        "Negative_Example": "decrease number of replicas to 0"
+    },
+    {
+        "content": "failed to remove weighted routing metadata from cluster state org.elasticsearch.index.IndexNotFoundException: no such index [test]",
+        "template": "failed to remove weighted routing metadata from cluster state <*>",
+        "Postive_Example": "failed to remove weighted routing metadata from cluster state org.elasticsearch.common.breaker.CircuitBreakingException: [parent] Data too large, data for [<transport_request>] would be [123456789/117.7mb], which is larger than the limit of [12345678/11.7mb]",
+        "Negative_Example": "Failed to execute NodeStatsAction for ClusterInfoUpdateJob org.elasticsearch.transport.NodeNotConnectedException"
+    },
+    {
+        "content": "failed to read latest segment infos on flush java.io.FileNotFoundException: /var/log/elasticsearch/index_1/_0.cfs (No such file or directory)",
+        "template": "failed to read latest segment infos on flush <*>",
+        "Postive_Example": "failed to read latest segment infos on flush org.elasticsearch.common.util.concurrent.EsRejectedExecutionException: rejected execution of org.elasticsearch.index.engine.InternalEngine$Flush@7a8b9c6a on EsThreadPoolExecutor[name = elasticsearch/write, queue capacity = 200, org.elasticsearch.common.util.concurrent.EsThreadPoolExecutor@5e8c9f36[Running, pool size = 8, active threads = 8, queued tasks = 200, completed tasks = 123456]]",
+        "Negative_Example": "Error while deleting unreferenced file java.io.FileNotFoundException: File does not exist"
+    },
+    {
+        "content": "Your repository metadata blob for repository [data-analysis] is larger than 5MB. Consider moving to a fresh repository for new snapshots or deleting unneeded snapshots from your repository to ensure stable repository behavior going forward.",
+        "template": "Your repository metadata blob for repository [<*>] is larger than 5MB. Consider moving to a fresh repository for new snapshots or deleting unneeded snapshots from your repository to ensure stable repository behavior going forward.",
+        "Postive_Example": "Your repository metadata blob for repository [machine-learning] is larger than 5MB. Consider moving to a fresh repository for new snapshots or deleting unneeded snapshots from your repository to ensure stable repository behavior going forward.",
+        "Negative_Example": "failed to remove weighted routing metadata from cluster state org.elasticsearch.rest.RestStatus$StatusExceptionMapper$1@7f31245a"
+    },
+    {
+        "content": "using max_chunk_size[131072], max_header_size[65536], max_initial_line_length[16384], max_content_length[16777216], pipelining_max_events[1600]",
+        "template": "using max_chunk_size[<*>], max_header_size[<*>], max_initial_line_length[<*>], max_content_length[<*>], pipelining_max_events[<*>]",
+        "Postive_Example": "using max_chunk_size[262144], max_header_size[131072], max_initial_line_length[32768], max_content_length[33554432], pipelining_max_events[3200]",
+        "Negative_Example": "Initializing shards: [index37][36], [index38][37], [index39][38]"
+    },
+    {
+        "content": "Engine is already closed. java.lang.OutOfMemoryError: Failed to allocate a 16 byte allocation with 0 free bytes and 3GB until OOM",
+        "template": "Engine is already closed. <*>",
+        "Postive_Example": "Engine is already closed. java.util.concurrent.RejectedExecutionException: Task com.example.EngineTask@4f8b8b8 rejected from java.util.concurrent.ThreadPoolExecutor@7a6f1f6[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 5]",
+        "Negative_Example": "now set allocateTest1 to true and reroute we should see the [test1] index initializing"
+    },
+    {
+        "content": "skip local recovery as the index was closed or not allowed to write; safe commit [CommitPoint{segmentCount=11, generation=31, userData={translog_uuid=i9dee8h0-egd2-8fi2-gahf-ahdg7e9b9b7f, translog_generation=30, max_seq_no=130, min_seq_no=110, global_checkpoint=129}}] global checkpoint [129]",
+        "template": "skip local recovery as the index was closed or not allowed to write; safe commit <*> global checkpoint <*>",
+        "Postive_Example": "skip local recovery as the index was closed or not allowed to write; safe commit [CommitPoint{segmentCount=1, generation=2, userData={translog_uuid=3a9f6b4c-0f9c-4f5a-8d7e-3e8b0d6c0a9f, translog_generation=1, max_seq_no=0, min_seq_no=0, global_checkpoint=-1}}] global checkpoint [-1]",
+        "Negative_Example": "skip local recovery as the safe commit is up to date; safe commit [12] global checkpoint [12]"
+    },
+    {
+        "content": "local tasks [{\"id\":13,\"state\": \"RUNNING\", \"start_time\": \"2023-10-26T03:46:12,345Z\", \"node\":{\"id\": \"node-13\", \"name\": \"Node 13\", \"host\": \"192,168,0,13\", \"port\": 8080}}]",
+        "template": "local tasks [<*>]",
+        "Postive_Example": "local tasks [{\"id\":3,\"state\":\"FAILED\",\"start_time\":\"2023-10-26T03:56:34.567Z\",\"end_time\":\"2023-10-26T03:57:12.789Z\",\"failure_reason\":\"NullPointerException\",\"node\":{\"id\":\"node-3\",\"name\":\"Node 3\",\"host\":\"192.168.0.3\",\"port\":8080}}]",
+        "Negative_Example": "context [test2]: compiling script, type: [test case], lang: [Perl], options: [test]"
+    },
+    {
+        "content": "--> Simulate GCE API response for [https://www.googleapis.com/compute/v1/projects/my-project/zones/us-central1-a/operations/operation-1634794603-6e9f3a8c]",
+        "template": "--> Simulate GCE API response for [<*>]",
+        "Postive_Example": "--> Simulate GCE API response for [https://www.googleapis.com/compute/v1/projects/my-project/global/networks/default]",
+        "Negative_Example": "failed to resolve host [bing.com]java.net.UnknownHostException"
+    },
+    {
+        "content": "Resetting repository generation tracker because we failed to read generation [15] java.io.ObjectStreamException",
+        "template": "Resetting repository generation tracker because we failed to read generation [<*>] <*>",
+        "Postive_Example": "Resetting repository generation tracker because we failed to read generation [4] java.nio.file.AccessDeniedException",
+        "Negative_Example": "WARN refreshing cluster info rejected [no route to host] java.net.NoRouteToHostException"
+    },
+    {
+        "content": "will try to reestablish recovery with id [a7b3] in [5 seconds] (reason [connection lost])",
+        "template": "will try to reestablish recovery with id [<*>] in [<*>] (reason [<*>])",
+        "Postive_Example": "will try to reestablish recovery with id [n3b7] in [6 minutes] (reason [service unavailable])",
+        "Negative_Example": "refreshing cluster info in background [health check]"
+    },
+    {
+        "content": "changing max_merge_at_once from [12] to [16] because segments_per_tier [18] has to be higher or equal to it",
+        "template": "changing max_merge_at_once from [<*>] to [<*>] because segments_per_tier [<*>] has to be higher or equal to it",
+        "Postive_Example": "changing max_merge_at_once from [6] to [8] because segments_per_tier [9] has to be higher or equal to it",
+        "Negative_Example": "--> [Thread-1] done. tested [10] snapshots"
+    },
+    {
+        "content": "Plugin 'opensearch.pluginzip' is applied but no ' opensearch-index-management ' publication is defined.",
+        "template": "Plugin 'opensearch.pluginzip' is applied but no ' <*> ' publication is defined.",
+        "Postive_Example": "Plugin 'opensearch.pluginzip' is applied but no ' opensearch-trace-analytics-dashboards-plugin  ' publication is defined.",
+        "Negative_Example": "--> execution was blocked on node [node-13], shutting it down"
+    },
+    {
+        "content": "The specified location [/var/log/elasticsearch] doesn't start with any repository paths specified by the path.repo setting: [/home/snapshots,/data/backups]",
+        "template": "The specified location [<*>] doesn't start with any repository paths specified by the path.repo setting: [<*>]",
+        "Postive_Example": "The specified location [C:\\Users\\user\\Documents] doesn't start with any repository paths specified by the path.repo setting: [D:\\Snapshots,E:\\Backups]",
+        "Negative_Example": "--> execution was blocked on node [node-3], aborting snapshot"
+    },
+    {
+        "content": "turn off the translog retention for the replication group [5] as it starts using retention leases exclusively in peer recoveries",
+        "template": "turn off the translog retention for the replication group <*> as it starts using retention leases exclusively in peer recoveries",
+        "Postive_Example": "turn off the translog retention for the replication group [10] as it starts using retention leases exclusively in peer recoveries",
+        "Negative_Example": "removing retention lease [test] from current retention leases [test]"
+    },
+    {
+        "content": "check index failed during fetch seqNo: java.lang.IllegalArgumentException: Invalid sequence number -1",
+        "template": "check index failed during fetch seqNo: <*>",
+        "Postive_Example": "check index failed during fetch seqNo: org.apache.lucene.index.CorruptIndexException: checksum failed (hardware problem?) : expected=1f3b967 actual=2d4c869 (resource=BufferedChecksumIndexInput(MMapIndexInput(path=\"/var/data/index/segments_1\")))",
+        "Negative_Example": "Fetch phase failed org.apache.hadoop.hdfs.BlockMissingException: Could not obtain block"
+    },
+    {
+        "content": "[index7, index8, index9, index10] indices closed, but the operation timed out while waiting for enough shards to be started.",
+        "template": "[<*>] indices closed, but the operation timed out while waiting for enough shards to be started.",
+        "Postive_Example": "[index22] indices closed, but the operation timed out while waiting for enough shards to be started.",
+        "Negative_Example": "processing [indexing]: took [1.2s] no change in cluster state"
+    },
+    {
+        "content": "Could not find a readable index-N file in a non-empty shard snapshot directory [/usr/local/elasticsearch/data/nodes/0/indices/Nhj8n5NkQgWx9fz3JkYg4A/6]",
+        "template": "Could not find a readable index-N file in a non-empty shard snapshot directory [<*>]",
+        "Postive_Example": "Could not find a readable index-N file in a non-empty shard snapshot directory [C:\\Users\\Administrator\\elasticsearch-7.15.2\\data\\nodes\\0\\indices\\X3vz7aLrQIqjZqfKFH6nWw\\1]",
+        "Negative_Example": "--> routed search on index [news] visited [3] shards for routing [date:2023-10-27] and got hits [12]"
+    },
+    {
+        "content": "verification of shards for 11 succeeded, but block finalization already occurred (possibly for another block) [true]",
+        "template": "verification of shards for <*> succeeded, but block finalization already occurred (possibly for another block) [<*>]",
+        "Postive_Example": "verification of shards for 0 succeeded, but block finalization already occurred (possibly for another block) [false]",
+        "Negative_Example": "[9] store not initialized prior to closing shard, nothing to close"
+    },
+    {
+        "content": "processing [cluster update task: delete indices [[.monitoring-es-7-2023.10.27]]]: ignoring, cluster applier service not started",
+        "template": "processing [<*>]: ignoring, cluster applier service not started",
+        "Postive_Example": "processing [cluster update task: apply cluster state (from master [master {node-1}{aBcDeFgHiJkLmNoPqRsTuVwXyZ} committed version [123]])]: ignoring, cluster applier service not started",
+        "Negative_Example": "Failed to clean up old shard generation blobs org.json.JSONException: Invalid JSON format"
+    },
+    {
+        "content": "failed to remove weighted routing metadata from cluster state org.elasticsearch.common.breaker.CircuitBreakingException: [parent] Data too large, data for [<transport_request>] would be [123456789/117.7mb], which is larger than the limit of [12345678/11.7mb]",
+        "template": "failed to remove weighted routing metadata from cluster state <*>",
+        "Postive_Example": "failed to remove weighted routing metadata from cluster state java.lang.NullPointerException",
+        "Negative_Example": "Failed to execute NodeStatsAction for ClusterInfoUpdateJob org.elasticsearch.transport.NodeNotConnectedException"
+    },
+    {
+        "content": "registering decommission metadata [decommissionAttributeMetadata{attributeId=10, attributeType=NULL, attributeValue=null}] to execute action",
+        "template": "registering decommission metadata [<*>] to execute action",
+        "Postive_Example": "registering decommission metadata [decommissionAttributeMetadata{attributeId=12, attributeType=UUID, attributeValue='123e4567-e89b-12d3-a456-426614174000'}] to execute action",
+        "Negative_Example": "weights are same, not updating weighted routing weights [0.3] in metadata"
+    },
+    {
+        "content": "extracted content: {\"title\": \"How to generate simulated logs\", \"body\": \"The log consists of the constant Template and the abstract variable Parameter...\"}",
+        "template": "extracted content: <*>",
+        "Postive_Example": "extracted content: {\"animal\": \"panda\",",
+        "Negative_Example": "exception thrown by listener while notifying on ack timeout java.lang.SecurityException"
+    },
+    {
+        "content": "Rest tests for project [src/test/java/com/example/modelTest] will be copied to the test resources from the published jar (version: [1.1.4]).",
+        "template": "Rest tests for project [<*>] will be copied to the test resources from the published jar (version: [<*>]).",
+        "Postive_Example": "Rest tests for project [src/main/resources/application.properties] will be copied to the test resources from the published jar (version: [1.0.1]).",
+        "Negative_Example": "attempting to update current decommission status [ACTIVE] with expected status [ERROR]"
+    },
+    {
+        "content": "failed to remove weighted routing metadata from cluster state org.elasticsearch.cluster.block.ClusterBlockException: Cluster blocked by [SERVICE_UNAVAILABLE/1/state not recovered / initialized]",
+        "template": "failed to remove weighted routing metadata from cluster state <*>",
+        "Postive_Example": "failed to remove weighted routing metadata from cluster state org.elasticsearch.common.breaker.CircuitBreakingException: [parent] Data too large, data for [<transport_request>] would be [123456789/117.7mb], which is larger than the limit of [12345678/11.7mb]",
+        "Negative_Example": "Failed to execute NodeStatsAction for ClusterInfoUpdateJob org.elasticsearch.cluster.block.ClusterBlockException"
+    },
+    {
+        "content": "createMissingPeerRecoveryRetentionLeases: adding missing lease for [shardId[[messages][11], node[11], [R], s[UNASSIGNED], a[id=11]]]",
+        "template": "createMissingPeerRecoveryRetentionLeases: adding missing lease for <*>",
+        "Postive_Example": "createMissingPeerRecoveryRetentionLeases: adding missing lease for [shardId[[logs][2], node[2], [P], s[RELOCATING], a[id=2]]]",
+        "Negative_Example": "Rejecting write requests for shard, stale shards [15%] shards: [2, 4, 8]"
+    },
+    {
+        "content": "Exception from http client org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1] failed: Connection refused",
+        "template": "Exception from http client <*>",
+        "Postive_Example": "Exception from http client java.io.IOException: Broken pipe",
+        "Negative_Example": "Dfs phase failed org.apache.hadoop.ipc.RemoteException: File does not exist"
+    },
+    {
+        "content": "The exception from request processor [Aggregator] in the search pipeline [analytics] was ignored java.sql.SQLException",
+        "template": "The exception from request processor [<*>] in the search pipeline [<*>] was ignored <*>",
+        "Postive_Example": "The exception from request processor [Tokenizer] in the search pipeline [language] was ignored org.apache.lucene.analysis.Analyzer$TokenStreamComponents",
+        "Negative_Example": "failed to close resource java.sql.SQLException"
+    },
+    {
+        "content": "error notifying global checkpoint listener of timeout: org.elasticsearch.index.engine.EngineClosedException",
+        "template": "error notifying global checkpoint listener of timeout: <*>",
+        "Postive_Example": "error notifying global checkpoint listener of timeout: java.io.IOException",
+        "Negative_Example": "delaying recovery due to missing mapping changes org.elasticsearch.cluster.block.ClusterBlockException"
+    },
+    {
+        "content": "Failed to create working dir using hard links. Falling back to copy org.apache.commons.io.FileUtils$FileDeleteStrategy$ForceFileDeleteStrategy$1: Unable to force delete file: /tmp/workdir/file.txt",
+        "template": "Failed to create working dir using hard links. Falling back to copy <*>",
+        "Postive_Example": "Failed to create working dir using hard links. Falling back to copy java.io.IOException: Permission denied",
+        "Negative_Example": "failed to invoke after index created callback org.springframework.web.client.HttpClientErrorException"
+    },
+    {
+        "content": "now start initializing shards and expect exactly one rebalance from node1 to node 2 since index [test] is all on node1",
+        "template": "now start initializing shards and expect exactly one rebalance from node1 to node 2 since index [test] is all on node1",
+        "Postive_Example": "now start initializing shards and expect exactly one rebalance from node1 to node 2 since index [test] is all on node1",
+        "Negative_Example": "now, start 1 more node, check that rebalancing will not happen since we have shard sync going on"
+    }
 ]
